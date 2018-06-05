@@ -1,0 +1,56 @@
+:root {
+  --brandBackground: hsl(227, 15%, 95%);
+  --brandPrimary: hsl(227, 90%, 60%);
+  --brandDark: hsl(227, 50%, 15%);
+  --brandMuted: hsla(227, 50%, 15%, 0.5);
+  --brandBgTint: hsla(227, 50%, 15%, 0.05);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  transition: .2s ease;
+}
+
+body {
+  margin: 0;
+  background: var(--brandBackground);
+  color: var(--brandDark);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+}
+
+#__layout {
+  max-width: 40em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
