@@ -1,6 +1,6 @@
-# podlink-nuxt
+# PodLink
 
-> Nuxt.js project
+> The easiest way to share podcasts
 
 ## Build Setup
 
