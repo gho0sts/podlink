@@ -13,15 +13,15 @@
       </div>
       <h2 v-if="podcast.collectionId" class="show-subhead">Subscribe</h2>
       <div v-if="podcast.collectionId" class="show-buttons">
-        <a class="show-link" :href="`https://geo.itunes.apple.com/ca/podcast/feed/id${podcast.collectionId}`"><img src="/images/podcatchers/icon-itunes.svg" class ="app-img" /></a>
-        <a class="show-link" :href="podcast.spotifyLink" v-if="podcast.spotifyLink"><img src="/images/podcatchers/icon-spotify.svg" class ="app-img" /></a>
-        <a class="show-link" :href="`https://overcast.fm/itunes${podcast.collectionId}`"><img src="/images/podcatchers/icon-overcast.svg" class ="app-img" /></a>
-        <a class="show-link" :href="`http://castbox.fm/vic/${podcast.collectionId}`"><img src="/images/podcatchers/icon-castbox.svg" class ="app-img" /></a>
-        <a class="show-link" :href="`http://pca.st/itunes/${podcast.collectionId}`"><img src="/images/podcatchers/icon-pocketcasts.svg" class ="app-img" /></a>
-        <a class="show-link" :href="`https://castro.fm/itunes/${podcast.collectionId}`"><img src="/images/podcatchers/icon-castro.svg" class ="app-img" /></a>
-        <a class="show-link" :href="podcast.feedUrl"><img src="/images/podcatchers/icon-rss.svg" class ="app-img" /></a>
-        <a class="show-link" :href="`https://radiopublic.com/${podcast.feedUrl}`"><img src="/images/podcatchers/icon-radiopublic.svg" class ="app-img" /></a>
-        <a class="show-link" :href="`breaker:/subscribe/feed/${podcast.feedUrl}`"><img src="/images/podcatchers/icon-breaker.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="itunesLink"><img src="/images/podcatchers/icon-itunes.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="podcast.spotifyLink" v-if="podcast.spotifyLink"><img src="/images/podcatchers/icon-spotify.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="overcastLink"><img src="/images/podcatchers/icon-overcast.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="castboxLink"><img src="/images/podcatchers/icon-castbox.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="pocketcastsLink"><img src="/images/podcatchers/icon-pocketcasts.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="castroLink"><img src="/images/podcatchers/icon-castro.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="rssLink"><img src="/images/podcatchers/icon-rss.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="radiopublicLink"><img src="/images/podcatchers/icon-radiopublic.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" :href="breakerLink"><img src="/images/podcatchers/icon-breaker.svg" class ="app-img" /></a>
       </div>
       <h2 v-if="podcast.feedInfo" class="show-subhead">Listen</h2>
       <audio v-if="podcast.feedInfo" id="podcast" style="width: 100%;" controls="" preload="none">
@@ -33,7 +33,17 @@
 <script>
 export default {
   name: 'Listing',
-  props: ['podcast']
+  props: ['podcast'],
+  computed: {
+    itunesLink: function () { return `https://geo.itunes.apple.com/ca/podcast/feed/id${this.podcast.collectionId}`},
+    overcastLink: function () { return `https://overcast.fm/itunes${this.podcast.collectionId}`},
+    castboxLink: function () { return `http://castbox.fm/vic/${this.podcast.collectionId}`},
+    pocketcastsLink: function () { return `http://pca.st/itunes/${this.podcast.collectionId}`},
+    castroLink: function () { return `https://castro.fm/itunes/${this.podcast.collectionId}`},
+    breakerLink: function () { return 'breaker://subscribe/feed/' + encodeURIComponent(this.podcast.feedUrl)},
+    rssLink: function () { return `${this.podcast.feedUrl}`},
+    radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.podcast.feedUrl)}
+  }
 }
 </script>
 

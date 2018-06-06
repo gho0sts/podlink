@@ -16,7 +16,9 @@
     "@nuxtjs/google-tag-manager": "^2.0.0",
     "ajv": "^6.5.0",
     "axios": "^0.18.0",
-    "nuxt": "!1.0.0",
+    "node-podcast-parser": "^2.2.0",
+    "nuxt": "^1.0.0",
+    "request": "^2.87.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
