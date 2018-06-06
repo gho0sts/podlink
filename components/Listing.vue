@@ -13,24 +13,26 @@
       </div>
       <h2 v-if="podcast.collectionId" class="show-subhead">Subscribe</h2>
       <div v-if="podcast.collectionId" class="show-buttons">
-        <a class="show-link" target="_blank" :href="itunesLink"><img src="/images/podcatchers/icon-itunes.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="podcast.spotifyLink" v-if="podcast.spotifyLink"><img src="/images/podcatchers/icon-spotify.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="overcastLink"><img src="/images/podcatchers/icon-overcast.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="castboxLink"><img src="/images/podcatchers/icon-castbox.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="pocketcastsLink"><img src="/images/podcatchers/icon-pocketcasts.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="castroLink"><img src="/images/podcatchers/icon-castro.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="rssLink"><img src="/images/podcatchers/icon-rss.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="radiopublicLink"><img src="/images/podcatchers/icon-radiopublic.svg" class ="app-img" /></a>
-        <a class="show-link" target="_blank" :href="breakerLink"><img src="/images/podcatchers/icon-breaker.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.itunesVisible" :href="itunesLink"><img src="/images/podcatchers/icon-itunes.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.spotifyVisible" :href="podcast.spotifyLink" v-if="podcast.spotifyLink"><img src="/images/podcatchers/icon-spotify.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.overcastVisible" :href="overcastLink"><img src="/images/podcatchers/icon-overcast.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.castboxVisible" :href="castboxLink"><img src="/images/podcatchers/icon-castbox.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.pocketcastsVisible" :href="pocketcastsLink"><img src="/images/podcatchers/icon-pocketcasts.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.castroVisible" :href="castroLink"><img src="/images/podcatchers/icon-castro.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.rssVisible" :href="rssLink"><img src="/images/podcatchers/icon-rss.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.radiopublicVisible" :href="radiopublicLink"><img src="/images/podcatchers/icon-radiopublic.svg" class ="app-img" /></a>
+        <a class="show-link" target="_blank" v-show="$store.state.breakerVisible" :href="breakerLink"><img src="/images/podcatchers/icon-breaker.svg" class ="app-img" /></a>
       </div>
       <h2 v-if="podcast.feedInfo" class="show-subhead">Listen</h2>
       <audio v-if="podcast.feedInfo" id="podcast" style="width: 100%;" controls="" preload="none">
         <source :src="podcast.feedInfo.latestEpisode" type="audio/mpeg">
       </audio>
     </div>
+    <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url">Customize this URL</a>
   </main>
 </template>
 <script>
+
 export default {
   name: 'Listing',
   props: ['podcast'],
@@ -43,6 +45,8 @@ export default {
     breakerLink: function () { return 'breaker://subscribe/feed/' + encodeURIComponent(this.podcast.feedUrl)},
     rssLink: function () { return `${this.podcast.feedUrl}`},
     radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.podcast.feedUrl)}
+
+            
   }
 }
 </script>

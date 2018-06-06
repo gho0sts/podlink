@@ -43,5 +43,9 @@ module.exports = {
   },
   modules: [
     ['@nuxtjs/google-tag-manager', { id: 'GTM-WBRSGC7' }],
+  ],
+  plugins: [
+    '~plugins/vue-js-modal',
+    { src: '~/plugins/localStorage', ssr: false }
   ]
 }
