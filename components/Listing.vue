@@ -31,58 +31,9 @@
   </main>
 </template>
 <script>
-import axios from 'axios'
-
 export default {
   name: 'Listing',
-
-  data () {
-    return {
-      podcast: {
-        'collectionId': null,
-        'collectionName': null,
-        'feedUrl': null,
-        'artworkUrl600': null,
-        'links': {
-          'itunes': null,
-          'spotify': null,
-          'overcast': null,
-          'castbox': null,
-          'pocketcasts': null,
-          'castro': null,
-          'rss': null,
-          'radiopublic': null,
-          'breaker': null
-        },
-        'feedInfo': {
-          'homeUrl': null,
-          'desc': null,
-          'latestEpisode': null
-        },
-        'spotifyLink': null
-      }
-    }
-  },
-
-  created () {
-    this.fetchData()
-  },
-
-  watch: {
-    '$route': 'fetchData'
-  },
-
-  methods: {
-    fetchData () {
-      axios.get(' https://itunes.apple.com/lookup?id=' + this.$route.params.podcast)
-        .then((resp) => {
-          this.podcast = resp.data.results[0]
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    }
-  }
+  props: ['podcast']
 }
 </script>
 
