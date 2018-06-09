@@ -8,8 +8,9 @@
     <div class="show-body">
       <div class="show-text">
         <h1 class="show-name">{{podcast.collectionName}}</h1>
-        <a v-if="podcast.feedInfo" class="show-url" :href="podcast.feedInfo">{{podcast.feedInfo.homeUrl}}</a>
-        <div v-if="podcast.feedInfo" class="show-desc">{{podcast.feedInfo.desc}}</div>
+        <a v-if="details" class="show-url" :href="details.website">{{podcast.artistName}}</a>
+        <div v-if="!details" class="show-url" >{{podcast.artistName}}</div>
+        <div v-if="details" class="show-desc">{{details.description}}</div>
       </div>
       <h2 v-if="podcast.collectionId" class="show-subhead">Subscribe</h2>
       <div v-if="podcast.collectionId" class="show-buttons">
@@ -28,14 +29,14 @@
         <source :src="podcast.feedInfo.latestEpisode" type="audio/mpeg">
       </audio>
     </div>
-    <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url">Customize this URL</a>
+    <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url" class="custom-url">Customize this URL</a>
   </main>
 </template>
 <script>
 
 export default {
   name: 'Listing',
-  props: ['podcast'],
+  props: ['podcast','details'],
   computed: {
     itunesLink: function () { return `https://geo.itunes.apple.com/ca/podcast/feed/id${this.podcast.collectionId}`},
     overcastLink: function () { return `https://overcast.fm/itunes${this.podcast.collectionId}`},
@@ -44,9 +45,7 @@ export default {
     castroLink: function () { return `https://castro.fm/itunes/${this.podcast.collectionId}`},
     breakerLink: function () { return 'breaker://subscribe/feed/' + encodeURIComponent(this.podcast.feedUrl)},
     rssLink: function () { return `${this.podcast.feedUrl}`},
-    radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.podcast.feedUrl)}
-
-            
+    radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.podcast.feedUrl)},
   }
 }
 </script>
@@ -145,5 +144,13 @@ export default {
   margin: .25rem;
   border-radius: .75rem;
   overflow: hidden;
+}
+
+.custom-url {
+  display: block;
+  padding: 1.5rem;
+  font-size: .75em;
+  text-decoration: none;
+  color: var(--brandMuted);
 }
 </style>

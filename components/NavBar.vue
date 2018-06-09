@@ -147,6 +147,7 @@ export default {
     background:none;
     cursor:pointer;
     grid-area: ⚙️;
+    height: 3rem;
 
     svg {
         fill: var(--brandMuted);
