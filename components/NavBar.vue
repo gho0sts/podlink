@@ -141,7 +141,6 @@ export default {
 }
 
 .nav-settings {
-    appearance:none;
     border:none;
     padding:0;
     background:none;
@@ -174,9 +173,6 @@ export default {
     background: no-repeat center;
     background-size: 1.25rem;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' fill='none' stroke='%23000'><line x1='1' y1='1' x2='7' y2='7' /><line x1='7' y1='1' x2='1' y2='7'/></svg>");
-}
-
-.prefs-heading {
 }
 
 .prefs-desc {

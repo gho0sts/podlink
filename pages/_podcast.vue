@@ -1,7 +1,8 @@
 <template>
     <div>
         <NavBar/>
-        <Listing v-bind="{details,podcast}"/>
+        <Listing v-if="podcast" v-bind="{details,podcast}"/>
+        <Error v-if="!podcast"/>
     </div>
 </template>
 <script>
@@ -9,9 +10,13 @@ import axios from 'axios'
 import stringify from 'json-stringify-safe'
 import NavBar from '~/components/NavBar.vue'
 import Listing from '~/components/Listing.vue'
+import Error from '~/components/Error.vue'
 
 export default {
-  name: 'Home',
+  validate ({ params }) {
+    return /^\d+$/.test(params.podcast)
+  },   
+  name: 'Podcast',
   components: { NavBar, Listing },
   async asyncData({ params }) {
     try {
