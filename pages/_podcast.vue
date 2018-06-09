@@ -17,7 +17,7 @@ export default {
     return /^\d+$/.test(params.podcast)
   },   
   name: 'Podcast',
-  components: { NavBar, Listing },
+  components: { NavBar, Listing, Error },
   async asyncData({ params }) {
     try {
       let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)
