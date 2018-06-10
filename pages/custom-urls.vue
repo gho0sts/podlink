@@ -15,6 +15,14 @@ import NavBar from '~/components/NavBar.vue'
 export default {
   name: 'CustomURLs',
   components: { NavBar },
+  head () {
+    return {
+      script: [
+        { src: 'https://plasso.com/embed/storefront.1.0.js' },
+        { src: '/js/plasso.init.js' }
+      ]
+    } 
+  },
   data () {
     return {
       heading: 'Claim Your Custom URL',
