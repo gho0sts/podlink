@@ -29,7 +29,7 @@
         <source :src="podcast.feedInfo.latestEpisode" type="audio/mpeg">
       </audio>
     </div>
-    <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url" class="custom-url">Customize this URL</a>
+    <nuxt-link to="/custom-urls" class="custom-url">Customize this URL</nuxt-link>
   </main>
 </template>
 <script>

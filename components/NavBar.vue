@@ -1,6 +1,6 @@
 <template>
     <nav class="site-nav">
-        <a href="/" class="nav-logo"><IconLogo /></a>
+        <nuxt-link to="/" class="nav-logo"><IconLogo /></nuxt-link>
         <SearchBar class="nav-search"/>
         <button @click="$modal.show('prefs')" class="nav-settings"><IconGear /></button>
         <modal name="prefs" :width="320" height="auto" :scrollable="true">
