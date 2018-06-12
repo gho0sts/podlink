@@ -88,7 +88,7 @@ export default {
   display: block;
   z-index: 1;
   border-radius: .5em;
-  background: rgba(0, 0, 0, 0.07);
+  background: var(--brandBgTint);
 }
 
 .artwork-spacer {
