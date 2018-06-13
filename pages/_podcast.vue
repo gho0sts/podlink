@@ -13,11 +13,27 @@ import Listing from '~/components/Listing.vue'
 import Error from '~/components/Error.vue'
 
 export default {
+  name: 'Podcast',
   validate ({ params }) {
     return /^\d+$/.test(params.podcast)
   },   
-  name: 'Podcast',
   components: { NavBar, Listing, Error },
+  head () {
+    if (this.podcast) {
+      return {
+        title: `${this.podcast.collectionName} — PodLink`,
+        meta: [
+          { hid: 'og:title', name: 'og:title', content: `${this.podcast.collectionName} — PodLink` },
+          { hid: 'twitter:title', name: 'twitter:title', content: `${this.podcast.collectionName} — PodLink` },
+          { hid: 'description', name: 'description', content: this.details.description },
+          { hid: 'og:description', name: 'og:description', content: this.details.description },
+          { hid: 'twitter:description', name: 'twitter:description', content: this.details.description },
+          { hid: 'og:image', name: 'og:image', content: this.podcast.artworkUrl600 },
+          { hid: 'twitter:image', name: 'twitter:image', content: '/apple-touch-icon.png' }
+        ]
+      }
+    }
+  },
   async asyncData({ params }) {
     try {
       let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)

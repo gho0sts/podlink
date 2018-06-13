@@ -7,7 +7,16 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'og:title', name: 'og:title', content: 'PodLink' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'PodLink' },
+      { hid: 'description', name: 'description', content: 'The easiest way to share podcasts' },
+      { hid: 'og:description', name: 'og:description', content: 'The easiest way to share podcasts' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'The easiest way to share podcasts' },
+      { hid: 'og:image', name: 'og:image', content: '/apple-touch-icon.png' },
+      { hid: 'twitter:image', name: 'twitter:image', content: '/apple-touch-icon.png' },
+      { name: 'twitter:card', content: 'summary'},
+		  { name: 'twitter:site', content: '@_podlink'},
+		  { name: 'twitter:creator', content: '@_podlink'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
