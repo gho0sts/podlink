@@ -4,6 +4,12 @@
   --brandDark: hsl(227, 50%, 15%);
   --brandMuted: hsla(227, 50%, 15%, 0.5);
   --brandBgTint: hsla(227, 50%, 15%, 0.05);
+
+  --brandBackground: #ffffff;
+  --brandDark: #000000;
+  --brandMuted: #767676;
+  --brandBgTint: #f5f5f5;
+  --resultHover: var(--brandBgTint);
 }
 
 html {

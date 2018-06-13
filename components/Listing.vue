@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .show-details {
   display: flex;
@@ -144,13 +144,21 @@ export default {
   margin: .25rem;
   border-radius: .75rem;
   overflow: hidden;
+
+  &:hover {
+    transform: scale(1.166666667);
+  }
 }
 
 .custom-url {
   display: block;
-  padding: 1.5rem;
+  margin: 1.5rem;
   font-size: .75em;
   text-decoration: none;
   color: var(--brandMuted);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
