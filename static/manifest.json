@@ -1,0 +1,11 @@
+{
+  "name": "PodLink",
+  "short_name": "PodLink",
+  "theme_color": "#315bf8",
+  "background_color": "#FFFFFF",
+  "display": "browser",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": null,
+  "splash_pages": null
+}
