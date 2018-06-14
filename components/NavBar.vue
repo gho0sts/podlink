@@ -1,8 +1,8 @@
 <template>
     <nav class="site-nav">
-        <nuxt-link to="/" class="nav-logo"><IconLogo /></nuxt-link>
+        <nuxt-link to="/" aria-label="Home" class="nav-logo"><IconLogo /></nuxt-link>
         <SearchBar class="nav-search"/>
-        <button @click="$modal.show('prefs')" class="nav-settings"><IconGear /></button>
+        <button @click="$modal.show('prefs')" role="button" aria-label="Preferences" class="nav-settings"><IconGear /></button>
         <modal name="prefs" :width="320" height="auto" :scrollable="true">
             <div class="modal-inner">
                 <button @click="$modal.hide('prefs')" class="prefs-close"></button>
@@ -44,7 +44,7 @@
                     <li class="switch-list-item">
                         <label class="switch-list-label" for="toggle-pocketcasts">
                             <img src="/images/podcatchers/icon-pocketcasts.svg" class="switch-app-icon" />
-                            <span>Pocket</span> Casts
+                            <span>Pocket Casts</span>
                         </label>
                         <input class="toggle-checkbox" type="checkbox" id="toggle-pocketcasts" v-model="$store.state.pocketcastsVisible" :value="true">
                         <label class="toggle-switch" for="toggle-pocketcasts"></label>

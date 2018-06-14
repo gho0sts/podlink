@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input v-model="term" type="search" @input="search" placeholder="Search for a podcast">
+        <input v-model="term" type="search" @input="search" aria-label="Search for a podcast" placeholder="Search for a podcast">
 
         <transition-group tag="ul" name="results" class="search-results">
             <li v-for="result in results" class="result" :key="result.collectionId">

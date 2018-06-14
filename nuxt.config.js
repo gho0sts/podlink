@@ -3,20 +3,64 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
     title: 'PodLink',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title', name: 'og:title', content: 'PodLink' },
-      { hid: 'twitter:title', name: 'twitter:title', content: 'PodLink' },
-      { hid: 'description', name: 'description', content: 'The easiest way to share podcasts' },
-      { hid: 'og:description', name: 'og:description', content: 'The easiest way to share podcasts' },
-      { hid: 'twitter:description', name: 'twitter:description', content: 'The easiest way to share podcasts' },
-      { hid: 'og:image', name: 'og:image', content: '/apple-touch-icon.png' },
-      { hid: 'twitter:image', name: 'twitter:image', content: '/apple-touch-icon.png' },
-      { name: 'twitter:card', content: 'summary'},
-		  { name: 'twitter:site', content: '@_podlink'},
-		  { name: 'twitter:creator', content: '@_podlink'}
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'The easiest way to share podcasts'
+      },
+      { 
+        hid: 'og:title', 
+        property: 'og:title', 
+        content: 'PodLink'
+      },
+      { 
+        hid: 'og:description', 
+        property: 'og:description', 
+        content: 'The easiest way to share podcasts'
+      },
+      { 
+        hid: 'og:image', 
+        property: 'og:image', 
+        content: '/apple-touch-icon.png'
+      },
+      { 
+        hid: 'og:url', 
+        property: 'og:url', 
+        content: 'https://pod.link/'
+      },
+      { 
+        hid: 'og:site_name', 
+        property: 'og:site_name', 
+        content: 'PodLink'
+      },
+      { 
+        hid: 'twitter:title', 
+        name: 'twitter:title', 
+        content: 'PodLink'
+      },
+      { 
+        hid: 'twitter:description', 
+        name: 'twitter:description', 
+        content: 'The easiest way to share podcasts'
+      },
+      { 
+        hid: 'twitter:image', 
+        name: 'twitter:image', 
+        content: '/apple-touch-icon.png'
+      },
+		  { 
+        name: 'twitter:site', content: '@_podlink'
+      },
+		  { 
+        name: 'twitter:creator', content: '@_podlink'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
