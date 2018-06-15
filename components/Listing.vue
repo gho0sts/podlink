@@ -25,8 +25,8 @@
         <a class="show-link" target="_blank" rel="noopener" v-show="$store.state.breakerVisible" :href="breakerLink"><img class="app-img" alt="Breaker" src="/images/podcatchers/icon-breaker.svg" /></a>
       </div>
       <h2 v-if="podcast.feedInfo" class="show-subhead">Listen</h2>
-      <audio v-if="podcast.feedInfo" id="podcast" style="width: 100%;" controls="" preload="none">
-        <source :src="podcast.feedInfo.latestEpisode" type="audio/mpeg">
+      <audio v-if="details" id="podcast" style="width: 100%;" controls="" preload="none">
+        <source :src="details.episodes[0].enclosure.url" type="audio/mpeg">
       </audio>
     </div>
     <nuxt-link to="/custom-urls" class="custom-url">Customize this URL</nuxt-link>
