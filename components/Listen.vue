@@ -1,8 +1,8 @@
 <template>
-  <div class="listen">
-    <h2 v-if="details" class="show-subhead">Listen</h2>
-    <audio v-if="details" id="podcast" style="width: 100%;" controls="" preload="none">
-        <source :src="details.episodes[0].enclosure.url" type="audio/mpeg">
+  <div class="show-listen">
+    <h2 class="show-subhead">Listen</h2>
+    <audio id="show-player" style="width: 100%;" controls="" preload="none">
+        <source :src="show.episodes[0].enclosure.url" type="audio/mpeg">
     </audio>
   </div>
 </template>
@@ -10,13 +10,13 @@
 
 export default {
   name: 'Listen',
-  props: ['details'],
+  props: ['show'],
 }
 </script>
 
 <style scoped lang="scss">
 
-.listen {
+.show-listen {
   width: 100%;
 }
 
@@ -24,7 +24,7 @@ export default {
   margin: 1.5rem 0 0;
 }
 
-audio {
+#show-player {
   margin-top: 5px;
 }
 </style>

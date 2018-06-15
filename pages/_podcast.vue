@@ -1,8 +1,8 @@
 <template>
     <div>
         <NavBar/>
-        <Listing v-if="details" v-bind="{details,podcast}"/>
-        <Error v-if="!details"/>
+        <Listing v-if="show" v-bind="{show,itunes}"/>
+        <Error v-if="!show"/>
     </div>
 </template>
 <script>
@@ -19,36 +19,36 @@ export default {
   },   
   components: { NavBar, Listing, Error },
   head () {
-    if (this.podcast) {
+    if (this.itunes) {
       return {
-        title: `${this.details.title} — PodLink`,
+        title: `${this.show.title} — PodLink`,
         meta: [
-          { hid: 'og:title', property: 'og:title', content: `${this.details.title} — PodLink` },
-          { hid: 'twitter:title', name: 'twitter:title', content: `${this.details.title} — PodLink` },
-          { hid: 'description', name: 'description', content: this.details.description },
-          { hid: 'og:description', property: 'og:description', content: this.details.description },
-          { hid: 'twitter:description', name: 'twitter:description', content: this.details.description },
-          { hid: 'og:image', property: 'og:image', content: this.podcast.artworkUrl600 },
+          { hid: 'og:title', property: 'og:title', content: `${this.show.title} — PodLink` },
+          { hid: 'twitter:title', name: 'twitter:title', content: `${this.show.title} — PodLink` },
+          { hid: 'description', name: 'description', content: this.show.description },
+          { hid: 'og:description', property: 'og:description', content: this.show.description },
+          { hid: 'twitter:description', name: 'twitter:description', content: this.show.description },
+          { hid: 'og:image', property: 'og:image', content: this.itunes.artworkUrl600 },
           { hid: 'twitter:image', name: 'twitter:image', content: '/apple-touch-icon.png' },
           { 
             hid: 'description', 
             name: 'description', 
-            content: this.details.description
+            content: this.show.description
           },
           { 
             hid: 'og:title', 
             property: 'og:title', 
-            content: `${this.details.title} — PodLink`
+            content: `${this.show.title} — PodLink`
           },
           { 
             hid: 'og:description', 
             property: 'og:description', 
-            content: this.details.description
+            content: this.show.description
           },
           { 
             hid: 'og:image', 
             property: 'og:image', 
-            content: this.podcast.artworkUrl600
+            content: this.itunes.artworkUrl600
           },
           { 
             hid: 'og:url', 
@@ -58,22 +58,22 @@ export default {
           { 
             hid: 'twitter:title', 
             name: 'twitter:title', 
-            content: `${this.details.title} — PodLink`
+            content: `${this.show.title} — PodLink`
           },
           { 
             hid: 'twitter:description', 
             name: 'twitter:description', 
-            content: this.details.description
+            content: this.show.description
           },
           { 
             hid: 'twitter:image', 
             name: 'twitter:image', 
-            content: this.podcast.artworkUrl600
+            content: this.itunes.artworkUrl600
           },
           { 
             hid: 'profile:username', 
             name: 'profile:username', 
-            content: this.podcast.collectionId
+            content: this.itunes.collectionId
           },
           { 
             hid: 'og:type', 
@@ -88,8 +88,8 @@ export default {
     let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)
     let podlinkservices = await axios.post('https://podlink-services-develop.herokuapp.com/api/v1/info', {rssUrl: itunes.data.results[0].feedUrl})
     return {
-      podcast: itunes.data.results[0],
-      details: podlinkservices.data 
+      itunes: itunes.data.results[0],
+      show: podlinkservices.data 
     }
   }
  }

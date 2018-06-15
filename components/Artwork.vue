@@ -1,15 +1,15 @@
 <template>
   <div class="show-artwork">
-    <img :src="details.image" :alt="details.title" class="show-artwork-blur">
-    <img :src="details.image" :alt="details.title" class="show-artwork-front">
-    <svg class="artwork-spacer" width="320" height="320"/>
+    <img :src="show.image" :alt="show.title" class="show-artwork-blur">
+    <img :src="show.image" :alt="show.title" class="show-artwork-front">
+    <svg class="show-artwork-spacer" width="320" height="320"/>
   </div>
 </template>
 <script>
 
 export default {
   name: 'Artwork',
-  props: ['details'],
+  props: ['show'],
 }
 </script>
 
@@ -46,7 +46,7 @@ export default {
   background: var(--brandBgTint);
 }
 
-.artwork-spacer {
+.show-artwork-spacer {
   position: relative;
   width: 100%;
   height: auto;

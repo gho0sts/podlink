@@ -1,27 +1,26 @@
 <template>
-  <div class="show-text">
-    <h1 class="show-name">{{details.title}}</h1>
-    <a v-if="details" class="show-url" :href="details.link">{{details.author}}</a>
-    <div v-if="!details" class="show-url" >{{details.author}}</div>
-    <div v-if="details" class="show-desc">{{details.description.long}}</div>
+  <div class="show-info">
+    <h1 class="show-title">{{show.title}}</h1>
+    <a class="show-author" :href="show.link">{{show.author}}</a>
+    <div class="show-description">{{show.description.long}}</div>
   </div>
 </template>
 <script>
 export default {
   name: 'Info',
-  props: ['details'],
+  props: ['show'],
 }
 </script>
 
 <style scoped lang="scss">
 
-.show-name {
+.show-title {
   font-size: 2em;
   font-weight: 900;
   margin: 1.5rem 0 0;
 }
 
-.show-url {
+.show-author {
   text-transform: uppercase;
   font-size: .75rem;
   font-weight: 900;
@@ -30,9 +29,13 @@ export default {
   text-overflow: ellipsis;
   text-decoration: none;
   color: var(--brandPrimary);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.show-desc {
+.show-description {
   margin-top: .5rem;
   font-size: .875rem;
   text-align: left;

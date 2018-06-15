@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="show-subscribe">
     <h2 class="show-subhead">Subscribe</h2>
     <div class="show-buttons">
       <a class="show-link" target="_blank" rel="noopener" v-show="$store.state.itunesVisible" :href="`https://geo.itunes.apple.com/ca/podcast/feed/id${iTunesID}`"><img class="app-img" alt="iTunes" src="/images/podcatchers/icon-itunes.svg" /></a>

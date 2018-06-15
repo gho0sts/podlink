@@ -1,9 +1,11 @@
 <template>
-  <main class="show-details">
-    <Artwork v-bind="{details}"/>
-    <Info v-bind="{details}"/>
-    <Subscribe v-bind:iTunesID="podcast.collectionId" v-bind:feedUrl="podcast.feedUrl" />
-    <Listen v-bind="{details}"/>
+  <main class="show">
+    <Artwork v-bind="{show}"/>
+    <div class="show-details">
+      <Info v-bind="{show}"/>
+      <Subscribe v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
+    </div>
+    <Listen v-bind="{show}"/>
     <nuxt-link to="/custom-urls" class="custom-url">Customize this URL</nuxt-link>
   </main>
 </template>
@@ -15,14 +17,14 @@ import Listen from '~/components/Listen.vue'
 
 export default {
   name: 'Listing',
-  props: ['podcast','details'],
+  props: ['itunes','show'],
   components: { Artwork, Info, Subscribe, Listen }
 }
 </script>
 
 <style scoped lang="scss">
 
-.show-details {
+.show {
   display: flex;
   flex-direction: column;
   justify-content: center;
