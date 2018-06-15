@@ -1,9 +1,9 @@
 <template>
   <main class="show-details">
-    <Artwork v-if="podcast" v-bind="{podcast}"/>
-    <Info v-if="details" v-bind="{podcast,details}"/>
-    <Subscribe v-if="podcast" v-bind="{podcast}"/>
-    <Listen v-if="details" v-bind="{details}"/>
+    <Artwork v-bind="{details}"/>
+    <Info v-bind="{details}"/>
+    <Subscribe v-bind:iTunesID="podcast.collectionId" v-bind:feedUrl="podcast.feedUrl" />
+    <Listen v-bind="{details}"/>
     <nuxt-link to="/custom-urls" class="custom-url">Customize this URL</nuxt-link>
   </main>
 </template>

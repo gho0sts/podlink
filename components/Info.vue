@@ -1,15 +1,15 @@
 <template>
   <div class="show-text">
-    <h1 class="show-name">{{podcast.collectionName}}</h1>
-    <a v-if="details" class="show-url" :href="details.link">{{podcast.artistName}}</a>
-    <div v-if="!details" class="show-url" >{{podcast.artistName}}</div>
+    <h1 class="show-name">{{details.title}}</h1>
+    <a v-if="details" class="show-url" :href="details.link">{{details.author}}</a>
+    <div v-if="!details" class="show-url" >{{details.author}}</div>
     <div v-if="details" class="show-desc">{{details.description.long}}</div>
   </div>
 </template>
 <script>
 export default {
   name: 'Info',
-  props: ['podcast','details'],
+  props: ['details'],
 }
 </script>
 

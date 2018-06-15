@@ -1,8 +1,8 @@
 <template>
     <div>
         <NavBar/>
-        <Listing v-if="podcast" v-bind="{details,podcast}"/>
-        <Error v-if="!podcast"/>
+        <Listing v-if="details" v-bind="{details,podcast}"/>
+        <Error v-if="!details"/>
     </div>
 </template>
 <script>
@@ -21,10 +21,10 @@ export default {
   head () {
     if (this.podcast) {
       return {
-        title: `${this.podcast.collectionName} — PodLink`,
+        title: `${this.details.title} — PodLink`,
         meta: [
-          { hid: 'og:title', property: 'og:title', content: `${this.podcast.collectionName} — PodLink` },
-          { hid: 'twitter:title', name: 'twitter:title', content: `${this.podcast.collectionName} — PodLink` },
+          { hid: 'og:title', property: 'og:title', content: `${this.details.title} — PodLink` },
+          { hid: 'twitter:title', name: 'twitter:title', content: `${this.details.title} — PodLink` },
           { hid: 'description', name: 'description', content: this.details.description },
           { hid: 'og:description', property: 'og:description', content: this.details.description },
           { hid: 'twitter:description', name: 'twitter:description', content: this.details.description },
@@ -38,7 +38,7 @@ export default {
           { 
             hid: 'og:title', 
             property: 'og:title', 
-            content: `${this.podcast.collectionName} — PodLink`
+            content: `${this.details.title} — PodLink`
           },
           { 
             hid: 'og:description', 
@@ -58,7 +58,7 @@ export default {
           { 
             hid: 'twitter:title', 
             name: 'twitter:title', 
-            content: `${this.podcast.collectionName} — PodLink`
+            content: `${this.details.title} — PodLink`
           },
           { 
             hid: 'twitter:description', 
@@ -85,18 +85,11 @@ export default {
     }
   },
   async asyncData({ params }) {
-    try {
-      let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)
-      let podlinkservices = await axios.post('https://podlink-services-develop.herokuapp.com/api/v1/info', {rssUrl: itunes.data.results[0].feedUrl})
-      return {
-        podcast: itunes.data.results[0],
-        details: podlinkservices.data 
-      }
-    } catch(err) {
-      let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)
-      return {
-        podcast: itunes.data.results[0]
-      }
+    let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)
+    let podlinkservices = await axios.post('https://podlink-services-develop.herokuapp.com/api/v1/info', {rssUrl: itunes.data.results[0].feedUrl})
+    return {
+      podcast: itunes.data.results[0],
+      details: podlinkservices.data 
     }
   }
  }

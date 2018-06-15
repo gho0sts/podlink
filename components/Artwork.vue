@@ -1,7 +1,7 @@
 <template>
   <div class="show-artwork">
-    <img :src="podcast.artworkUrl600" v-if="podcast.artworkUrl600" :alt="podcast.collectionName" class="show-artwork-blur">
-    <img :src="podcast.artworkUrl600" v-if="podcast.artworkUrl600" :alt="podcast.collectionName" class="show-artwork-front">
+    <img :src="details.image" :alt="details.title" class="show-artwork-blur">
+    <img :src="details.image" :alt="details.title" class="show-artwork-front">
     <svg class="artwork-spacer" width="320" height="320"/>
   </div>
 </template>
@@ -9,7 +9,7 @@
 
 export default {
   name: 'Artwork',
-  props: ['podcast'],
+  props: ['details'],
 }
 </script>
 
