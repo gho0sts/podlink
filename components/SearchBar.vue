@@ -72,7 +72,6 @@ input {
         outline: none;
         box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
         background-image: none;
-        
     }
 }
 
@@ -84,7 +83,6 @@ input {
     max-width: 100vw;
     margin: 0;
     background: var(--brandBackground);
-    box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
 
     .site-nav & {
         width: calc(100% + 10rem);
@@ -113,7 +111,6 @@ input {
     overflow: hidden;
     border-radius: .5rem;
     
-
     &:hover, &:focus {
         background: var(--resultHover);
         outline: none;
@@ -149,6 +146,4 @@ input {
 .result-publisher {
     color: var(--brandMuted);
 }
-
-
 </style>

@@ -107,6 +107,7 @@ module.exports = {
   ],
   plugins: [
     '~plugins/vue-js-modal',
+    { src: '~/plugins/vue-plyr', ssr: false },
     { src: '~/plugins/localStorage', ssr: false }
   ]
 }

@@ -1,9 +1,11 @@
 <template>
   <div class="show-listen">
     <h2 class="show-subhead">Listen</h2>
-    <audio id="show-player" style="width: 100%;" controls="" preload="none">
-        <source :src="show.episodes[0].enclosure.url" type="audio/mpeg">
-    </audio>
+    <plyr v-bind:options="options">
+      <audio id="show-player" style="width: 100%;" controls preload="none">
+          <source :src="show.episodes[0].enclosure.url" type="audio/mp3">
+      </audio>
+    </plyr>
   </div>
 </template>
 <script>
@@ -11,10 +13,18 @@
 export default {
   name: 'Listen',
   props: ['show'],
+  data () {
+    return {
+      options: {
+        "controls" : ['play', 'progress', 'current-time', 'mute', 'settings'],
+        "settings" : ['speed']
+      }
+    }
+  }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 .show-listen {
   width: 100%;
@@ -24,15 +34,16 @@ export default {
   margin: 1.5rem 0 0;
 
   @media screen and (min-width:44rem) {
-    display: none;
+    .show-listen & {
+      display: none;
+    }
   }
 }
 
-#show-player {
-  margin-top: 5px;
-
-  @media screen and (min-width:44rem) {
-    margin: 0;
-  }
+.plyr--audio .plyr__controls {
+  // box-shadow: 0 0 2em -.5rem var(--brandMuted);
+  // border-radius: .5rem;
+  background: transparent;
+  padding: 0;
 }
 </style>
