@@ -2,7 +2,7 @@
   <div id="readmore">
     <p>
       {{ displayText }}
-      <button @click="toggle">Read {{ toggled ? 'less' : 'more' }}</button>   
+      <button @click="toggle" v-if="long">Read {{ toggled ? 'less' : 'more' }}</button>   
     </p>
   </div>
 </template>
@@ -14,7 +14,8 @@ export default {
   data() {
     return {
       toggled: false,
-      limit: 100
+      long: true,
+      limit: 200
     };
   },
   computed: {
@@ -37,6 +38,7 @@ export default {
           }
         }
       } else {
+        this.long = false;
         return text;
       }
     }

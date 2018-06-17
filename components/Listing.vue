@@ -1,8 +1,8 @@
 <template>
   <main class="show">
-    <Artwork v-bind="{show}"/>
+    <Artwork class="show-media" v-bind="{show}"/>
     <div class="show-details">
-      <Info v-bind="{show}"/>
+      <Info class="show-info" v-bind="{show}"/>
       <Subscribe v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
     </div>
     <Listen v-bind="{show}"/>
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 .show {
   display: flex;
@@ -47,8 +47,9 @@ export default {
       "🎧 🎧"
       "🔗 🔗";
     grid-gap: 1.5rem;
+    align-items: flex-start;
 
-    .show-artwork {
+    .show-media {
       grid-area: 🖼;
     }
 

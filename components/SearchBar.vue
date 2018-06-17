@@ -83,10 +83,12 @@ input {
     width: 100%;
     max-width: 100vw;
     margin: 0;
+    background: var(--brandBackground);
+    box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
 
     .site-nav & {
         width: calc(100% + 10rem);
-        margin: 0 -5rem;
+        margin: -1.5rem -5rem 0;
     }
 
     .site-header & {
@@ -99,7 +101,7 @@ input {
     display: block;
 
     &:first-child {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 }
 
