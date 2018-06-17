@@ -1,8 +1,8 @@
 <template>
   <main class="show">
-    <Artwork v-bind="{show}"/>
+    <Artwork class="show-media" v-bind="{show}"/>
     <div class="show-details">
-      <Info v-bind="{show}"/>
+      <Info class="show-info" v-bind="{show}"/>
       <Subscribe v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
     </div>
     <Listen v-bind="{show}"/>
@@ -31,6 +31,45 @@ export default {
   align-items: center;
   padding: 7rem 1.5rem 1.5rem;
   text-align: center;
+
+  @supports(padding: max(0px)) {
+    padding-left: unquote('max(1.5rem, env(safe-area-inset-left))');
+    padding-right: unquote('max(1.5rem, env(safe-area-inset-right))');
+  }
+}
+
+@media screen and (min-width:44rem) {
+  .show {
+    display: grid;
+    grid-template-columns: 1fr 28rem;
+    grid-template-areas: 
+      "🖼 📝"
+      "🎧 🎧"
+      "🔗 🔗";
+    grid-gap: 1.5rem;
+    align-items: flex-start;
+
+    .show-media {
+      grid-area: 🖼;
+    }
+
+    .show-details {
+      grid-area: 📝;
+      text-align: left;
+    }
+
+    .show-buttons {
+      justify-content: flex-start;
+    }
+    
+    .show-listen {
+      grid-area: 🎧;
+    }
+
+    .custom-url {
+      grid-area: 🔗;
+    }
+  }
 }
 
 .custom-url {
@@ -42,6 +81,10 @@ export default {
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media screen and (min-width:44rem) {
+    margin: 0;
   }
 }
 </style>

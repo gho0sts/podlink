@@ -22,9 +22,17 @@ export default {
 
 .show-subhead {
   margin: 1.5rem 0 0;
+
+  @media screen and (min-width:44rem) {
+    display: none;
+  }
 }
 
 #show-player {
   margin-top: 5px;
+
+  @media screen and (min-width:44rem) {
+    margin: 0;
+  }
 }
 </style>

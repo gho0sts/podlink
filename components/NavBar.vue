@@ -39,6 +39,11 @@ export default {
   position: absolute;
   z-index: 2;
   background: var(--brandBackground);
+
+  @supports(padding: max(0px)) {
+    padding-left: unquote('max(1.5rem, env(safe-area-inset-left))');
+    padding-right: unquote('max(1.5rem, env(safe-area-inset-right))');
+  }
 }
 
 .nav-logo {
@@ -55,7 +60,7 @@ export default {
 
 .nav-search {
   width: 100%;
-  max-width: 30rem;
+  // max-width: 30rem;
   grid-area: 🔍;
   font-size: 1rem;
 }

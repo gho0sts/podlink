@@ -56,6 +56,7 @@ export default {
 
 .home-search {
     width: 100%;
+    max-width: 30rem;
     font-size: 1.5em;
 }
 </style>

@@ -48,9 +48,15 @@ svg {
 }
 
 #__layout {
-  max-width: 40em;
+  max-width: 31em;
   margin: 0 auto;
   position: relative;
+}
+
+@media screen and (min-width:44rem) {
+  #__layout {
+    max-width: 51rem;
+  }
 }
 
 .page-enter-active, .page-leave-active {

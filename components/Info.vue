@@ -2,13 +2,16 @@
   <div class="show-info">
     <h1 class="show-title">{{show.title}}</h1>
     <a class="show-author" :href="show.link">{{show.author}}</a>
-    <div class="show-description">{{show.description.long}}</div>
+    <ReadMore class="show-description" v-bind:text="show.description.long" />
   </div>
 </template>
 <script>
+import ReadMore from '~/components/ReadMore.vue'
+
 export default {
   name: 'Info',
   props: ['show'],
+  components: { ReadMore }
 }
 </script>
 
@@ -18,6 +21,10 @@ export default {
   font-size: 2em;
   font-weight: 900;
   margin: 1.5rem 0 0;
+
+  @media screen and (min-width:44rem) {
+    margin: 0;
+  }
 }
 
 .show-author {
