@@ -86,7 +86,7 @@ export default {
   },
   async asyncData({ params }) {
     let itunes = await axios.get(`https://itunes.apple.com/lookup?id=${params.podcast}`)
-    let podlinkservices = await axios.post('https://podlink-services-develop.herokuapp.com/api/v1/info', {rssUrl: itunes.data.results[0].feedUrl})
+    let podlinkservices = await axios.post('https://api.pod.link/api/v1/info', {rssUrl: itunes.data.results[0].feedUrl})
     return {
       itunes: itunes.data.results[0],
       show: podlinkservices.data 
