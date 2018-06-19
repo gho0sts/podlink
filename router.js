@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+const _735958e4 = () => import('../pages/custom-urls.vue' /* webpackChunkName: "pages/custom-urls" */).then(m => m.default || m)
 const _5a89c620 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 const _6476ab32 = () => import('../pages/_podcast.vue' /* webpackChunkName: "pages/_podcast" */).then(m => m.default || m)
 
@@ -65,16 +66,21 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
+			path: "/custom-urls",
+			component: _735958e4,
+			name: "custom-urls"
+		},
+		{
 			path: "/",
 			component: _5a89c620,
 			name: "index"
-		},
-        {
-            path: "/975392563",
-            component: _6476ab32,
-            name: "artfunk",
-            alias: "artfunk"
-        },
+    },
+    {
+      path: "/975392563",
+      component: _6476ab32,
+      name: "artfunk",
+      alias: "artfunk"
+    },
 		{
 			path: "/:podcast",
 			component: _6476ab32,
