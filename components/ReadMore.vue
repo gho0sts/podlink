@@ -51,5 +51,6 @@ button {
     margin: 0;
     border: none;
     color: var(--brandPrimary);
+    background: none;
 }
 </style>

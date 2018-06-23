@@ -19,6 +19,7 @@ export default {
 
 .show-title {
   font-size: 2em;
+  line-height: 1;
   font-weight: 900;
   margin: 1.5rem 0 0;
 

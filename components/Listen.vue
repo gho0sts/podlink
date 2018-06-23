@@ -31,7 +31,7 @@ export default {
 }
 
 .show-subhead {
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
 
   @media screen and (min-width:44rem) {
     .show-listen & {
@@ -40,10 +40,20 @@ export default {
   }
 }
 
+.plyr {
+  z-index: 1;
+}
+
 .plyr--audio .plyr__controls {
-  // box-shadow: 0 0 2em -.5rem var(--brandMuted);
-  // border-radius: .5rem;
-  background: transparent;
-  padding: 0;
+  margin-top: .25rem;
+  box-shadow: 0 0 2em -.5rem var(--brandMuted);
+  border-radius: .5rem;
+
+  @media screen and (min-width:44rem) {
+    margin-top: 0;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
 }
 </style>
