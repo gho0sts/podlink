@@ -14,6 +14,14 @@
           <label class="toggle-switch" for="toggle-itunes"></label>
         </li>
         <li class="switch-list-item">
+          <label class="switch-list-label" for="toggle-google">
+            <img src="/images/podcatchers/icon-googlepodcasts.svg" class="switch-app-icon" />
+            <span>Google Podcasts</span>
+          </label>
+          <input class="toggle-checkbox" type="checkbox" id="toggle-google" v-model="$store.state.googleVisible" :value="true">
+          <label class="toggle-switch" for="toggle-google"></label>
+        </li>
+        <li class="switch-list-item">
           <label class="switch-list-label" for="toggle-overcast">
             <img src="/images/podcatchers/icon-overcast.svg" class="switch-app-icon" />
             <span>Overcast</span>
@@ -46,14 +54,6 @@
           <label class="toggle-switch" for="toggle-castro"></label>
         </li>
         <li class="switch-list-item">
-          <label class="switch-list-label" for="toggle-rss">
-            <img src="/images/podcatchers/icon-rss.svg" class="switch-app-icon" />
-            <span>RSS</span>
-          </label>
-          <input class="toggle-checkbox" type="checkbox" id="toggle-rss" v-model="$store.state.rssVisible" :value="true">
-          <label class="toggle-switch" for="toggle-rss"></label>
-        </li>
-        <li class="switch-list-item">
           <label class="switch-list-label" for="toggle-radiopublic">
             <img src="/images/podcatchers/icon-radiopublic.svg" class="switch-app-icon" />
             <span>RadioPublic</span>
@@ -68,6 +68,14 @@
           </label>
           <input class="toggle-checkbox" type="checkbox" id="toggle-breaker" v-model="$store.state.breakerVisible" :value="true">
           <label class="toggle-switch" for="toggle-breaker"></label>
+        </li>
+        <li class="switch-list-item">
+          <label class="switch-list-label" for="toggle-rss">
+            <img src="/images/podcatchers/icon-rss.svg" class="switch-app-icon" />
+            <span>RSS</span>
+          </label>
+          <input class="toggle-checkbox" type="checkbox" id="toggle-rss" v-model="$store.state.rssVisible" :value="true">
+          <label class="toggle-switch" for="toggle-rss"></label>
         </li>
       </ul>
     </div>

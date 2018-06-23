@@ -4,6 +4,7 @@ const createStore = () => {
     return new Vuex.Store({
         state: {
             itunesVisible: true,
+            googleVisible: true,
             spotifyVisible: true,
             overcastVisible: true,
             castboxVisible: true,
