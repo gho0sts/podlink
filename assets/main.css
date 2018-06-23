@@ -5,10 +5,10 @@
   --brandMuted: hsla(227, 50%, 15%, 0.5);
   --brandBgTint: hsla(227, 50%, 15%, 0.05);
 
-  --brandBackground: #ffffff;
+  --brandBackground: #f3f4f6;
   --brandDark: #000000;
   --brandMuted: #767676;
-  --brandBgTint: #f5f5f5;
+  --brandBgTint: #e8e9ec;
   --resultHover: var(--brandBgTint);
 }
 
@@ -48,7 +48,7 @@ svg {
 }
 
 #__layout {
-  max-width: 31em;
+  max-width: 34em;
   margin: 0 auto;
   position: relative;
 }

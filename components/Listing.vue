@@ -1,6 +1,6 @@
 <template>
   <main class="show">
-    <Artwork class="show-media" v-bind="{show}"/>
+    <Artwork class="show-media" v-bind="{itunes}"/>
     <div class="show-details">
       <Info class="show-info" v-bind="{show}"/>
       <Subscribe v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
@@ -41,7 +41,7 @@ export default {
 @media screen and (min-width:44rem) {
   .show {
     display: grid;
-    grid-template-columns: 1fr 28rem;
+    grid-template-columns: 1fr 31rem;
     grid-template-areas: 
       "🖼 📝"
       "🎧 🎧"
