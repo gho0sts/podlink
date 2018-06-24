@@ -19,7 +19,7 @@ export default {
 
 .show-title {
   font-size: 2em;
-  line-height: 1;
+  line-height: 1.125;
   font-weight: 900;
   margin: 1.5rem 0 0;
 
@@ -31,6 +31,7 @@ export default {
 .show-author {
   text-transform: uppercase;
   font-size: .75rem;
+  line-height: 1.125;
   font-weight: 900;
   white-space: nowrap;
   overflow: hidden;
@@ -40,6 +41,10 @@ export default {
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media screen and (min-width:44rem) {
+    white-space: normal;
   }
 }
 

@@ -14,11 +14,11 @@
             </li>
         </transition-group>
 
-        <div v-if="noResults && term">
+        <div class="search-noresults" v-if="noResults && term">
             Sorry, but no results were found.
         </div>
 
-        <div v-if="searching">
+        <div class="search-searching" v-if="searching">
             <i>Searching...</i>
         </div>
     </div>
@@ -71,9 +71,16 @@ input {
     &:focus, &:hover {
         outline: none;
         box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
+        background-color: var(--resultHover);
         background-image: none;
     }
 }
+
+.search-noresults, .search-searching {
+    padding: 2rem 0 calc(100vh - 7.625rem);
+}
+
+
 
 .search-results {
     font-size: 1rem;
@@ -85,14 +92,15 @@ input {
     background: var(--brandBackground);
 
     .site-nav & {
-        width: calc(100% + 10rem);
-        margin: -1.5rem -5rem 0;
-        max-width: 51rem;
+        width: 100vw;
+        margin: 0 -5rem;
+        max-width: 51.5rem;
     }
 
-    .site-header & {
-        width: calc(100% + 2rem);
-        margin: 0 -1rem;
+    .site-intro & {
+        width: 100vw;
+        margin: 0 -1.5rem;
+        max-width: 33rem;
     }
 }
 
@@ -100,7 +108,7 @@ input {
     display: block;
 
     &:first-child {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
 

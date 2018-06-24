@@ -1,15 +1,13 @@
 :root {
-  --brandBackground: hsl(227, 15%, 98%);
+  --brandBackground: hsl(220, 14%, 92%);
   --brandPrimary: hsl(227, 90%, 60%);
   --brandDark: hsl(227, 50%, 15%);
   --brandMuted: hsla(227, 50%, 15%, 0.5);
   --brandBgTint: hsla(227, 50%, 15%, 0.05);
 
-  --brandBackground: #f3f4f6;
   --brandDark: #000000;
   --brandMuted: #767676;
-  --brandBgTint: #e8e9ec;
-  --resultHover: var(--brandBgTint);
+  --resultHover: #FFF;
 }
 
 html {
@@ -55,7 +53,7 @@ svg {
 
 @media screen and (min-width:44rem) {
   #__layout {
-    max-width: 51rem;
+    max-width: 51.5rem;
   }
 }
 

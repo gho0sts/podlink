@@ -96,7 +96,12 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
+<style lang="scss">
+.v--modal {
+  background: var(--brandBackground);
+  border-radius: .5rem;
+}
+
 .modal-inner {
   padding: 1.5rem;
 }

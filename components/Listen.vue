@@ -31,7 +31,7 @@ export default {
 }
 
 .show-subhead {
-  margin: 1rem 0 0;
+  margin: 1.5rem 0 0;
 
   @media screen and (min-width:44rem) {
     .show-listen & {
