@@ -80,8 +80,6 @@ input {
     padding: 2rem 0 calc(100vh - 7.625rem);
 }
 
-
-
 .search-results {
     font-size: 1rem;
     list-style: none;
@@ -94,7 +92,11 @@ input {
     .site-nav & {
         width: 100vw;
         margin: 0 -5rem;
-        max-width: 51.5rem;
+        max-width: 34rem;
+
+        @media screen and (min-width:44rem) {
+            max-width: 51.5rem;
+        }
     }
 
     .site-intro & {

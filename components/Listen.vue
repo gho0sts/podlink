@@ -56,4 +56,13 @@ export default {
     box-shadow: none;
   }
 }
+
+.plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true] {
+  background: var(--brandPrimary);
+}
+
+.plyr--full-ui input[type=range] {
+  color: var(--brandPrimary);
+}
+
 </style>
