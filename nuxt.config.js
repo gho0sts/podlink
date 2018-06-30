@@ -102,6 +102,9 @@ module.exports = {
       }
     }
   },
+  serverMiddleware: [
+    '~/servermiddleware/seo.js'
+  ],
   modules: [
     ['@nuxtjs/google-tag-manager', { id: 'GTM-WBRSGC7' }],
   ],
