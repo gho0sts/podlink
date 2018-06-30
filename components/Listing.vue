@@ -43,9 +43,9 @@ export default {
     display: grid;
     grid-template-columns: 1fr 31rem;
     grid-template-areas: 
-      "🖼 📝"
+      "🖼 ✏️"
       "🎧 🎧"
-      "🔗 🔗";
+      "🎉 🎉";
     grid-gap: 1.5rem;
     align-items: flex-start;
 
@@ -54,7 +54,7 @@ export default {
     }
 
     .show-details {
-      grid-area: 📝;
+      grid-area: ✏️;
       text-align: left;
     }
 
@@ -67,7 +67,7 @@ export default {
     }
 
     .custom-url {
-      grid-area: 🔗;
+      grid-area: 🎉;
     }
   }
 }
