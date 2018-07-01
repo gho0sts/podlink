@@ -106,6 +106,7 @@ module.exports = {
     '~/servermiddleware/seo.js'
   ],
   modules: [
+    'nuxt-clipboard2',
     ['@nuxtjs/google-tag-manager', { id: 'GTM-WBRSGC7' }],
   ],
   plugins: [

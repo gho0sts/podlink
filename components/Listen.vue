@@ -48,11 +48,13 @@ export default {
   margin-top: .25rem;
   box-shadow: 0 0 2em -.5rem var(--brandMuted);
   border-radius: .5rem;
+  padding: 0 .125rem;
+  background: var(--brandBgTint);
 
   @media screen and (min-width:44rem) {
     margin-top: 0;
-    background: transparent;
-    padding: 0;
+    // background: transparent;
+    // padding: 0;
     box-shadow: none;
   }
 }

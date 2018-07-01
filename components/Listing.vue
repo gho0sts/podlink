@@ -6,7 +6,7 @@
       <Subscribe v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
     </div>
     <Listen v-bind="{show}"/>
-    <nuxt-link to="/custom-urls" class="custom-url">Customize this URL</nuxt-link>
+    <Share v-bind:iTunesID="itunes.collectionId"/>
   </main>
 </template>
 <script>
@@ -14,11 +14,12 @@ import Artwork from '~/components/Artwork.vue'
 import Info from '~/components/Info.vue'
 import Subscribe from '~/components/Subscribe.vue'
 import Listen from '~/components/Listen.vue'
+import Share from '~/components/Share.vue'
 
 export default {
   name: 'Listing',
   props: ['itunes','show'],
-  components: { Artwork, Info, Subscribe, Listen }
+  components: { Artwork, Info, Subscribe, Listen, Share }
 }
 </script>
 
@@ -66,25 +67,9 @@ export default {
       grid-area: 🎧;
     }
 
-    .custom-url {
+    .show-share {
       grid-area: 🎉;
     }
-  }
-}
-
-.custom-url {
-  display: block;
-  margin: 1.5rem;
-  font-size: .75em;
-  text-decoration: none;
-  color: var(--brandMuted);
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  @media screen and (min-width:44rem) {
-    margin: 0;
   }
 }
 </style>

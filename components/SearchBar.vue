@@ -62,7 +62,6 @@ input {
     background: no-repeat center right .25rem var(--brandBgTint);
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='rgba(0,0,0,.5)' d='M14,9a5,5,0,1,0,5,5,5,5,0,0,0-5-5M7,14a7,7,0,1,1,13.0886,3.4561,1.11,1.11,0,0,0,.1365,1.332l3.984,4.007a1,1,0,0,1-1.418,1.41l-3.9695-3.992a1.1117,1.1117,0,0,0-1.3415-.1385A7.0012,7.0012,0,0,1,7,14'/></svg>");
     background-size: 1.5em;
-    color: var(--brandMuted);
     color: var(--brandDark);
     border-radius: .25em;
     margin: .5rem 0;
