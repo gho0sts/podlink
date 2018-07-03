@@ -21,7 +21,15 @@ export default {
     shareableLink: function () {
       if (process.browser) {
         let host = window.location.origin
-        let path = this.redirects.find( obj => obj.to === `/${this.iTunesID}` ).from;
+        let array = this.redirects
+
+        if ( array.contains(`/${this.iTunesID}`) ){
+          var path = array.find( obj => obj.to === `/${this.iTunesID}` ).from;
+        }
+        else {
+          var path = `/${this.iTunesID}`;
+        }
+                
         return `${host}${path}`
       }
     }
