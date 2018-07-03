@@ -15,23 +15,21 @@ export default {
   name: 'Share',
   props: ['iTunesID'],
   data () {
-    return { redirects }
+    return {
+      shareableLink: `https://pod.link/${this.iTunesID}`,
+      redirects
+    }
   },
   computed: {
     shareableLink: function () {
-      if (process.browser) {
-        let host = window.location.origin
-        let array = this.redirects
+      const array = this.redirects
+      let path = `/${this.iTunesID}`
 
-        if ( array.contains(`/${this.iTunesID}`) ){
-          var path = array.find( obj => obj.to === `/${this.iTunesID}` ).from;
-        }
-        else {
-          var path = `/${this.iTunesID}`;
-        }
-                
-        return `${host}${path}`
+      if ( array.contains(`/${this.iTunesID}`) ){
+        path = array.find( obj => obj.to === `/${this.iTunesID}` ).from
       }
+
+      return `https://pod.link${path}`
     }
   },
   methods: {
