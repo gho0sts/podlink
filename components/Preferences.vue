@@ -133,7 +133,8 @@ export default {
 
 .switch-list-item {
   display: flex;
-  padding: .5rem 0;
+  align-items: center;
+  padding: .25rem 0;
 }
 
 .switch-list-label {
@@ -144,7 +145,7 @@ export default {
 
 .switch-app-icon {
   display: inline-block;
-  width: 2rem;
+  width: 2.5rem;
   border-radius: .5rem;
   margin-right: .5rem;
 }
