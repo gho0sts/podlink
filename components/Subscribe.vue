@@ -51,7 +51,6 @@ export default {
   margin: .25rem;
   border-radius: .75rem;
   overflow: hidden;
-  background: var(--brandBgTint);
 
   &:hover {
     transform: scale(1.166666667);
