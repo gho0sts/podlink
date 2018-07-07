@@ -23,11 +23,11 @@ export default {
   },
   computed: {
     shareableLink: function () {
-      const redirects = this.redirects
+      const result = this.redirects.find( obj => obj.to === `/${this.iTunesID}` );
       let path = `/${this.iTunesID}`
 
-      if ( redirects.indexOf(`/${this.iTunesID}` != -1) ){
-        path = redirects.find( obj => obj.to === `/${this.iTunesID}` ).from
+      if ( result ){
+        path = result.from
       }
 
       return `https://pod.link${path}`
