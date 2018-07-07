@@ -18,19 +18,19 @@ export default {
 <style scoped lang="scss">
 
 .show-title {
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 1.125;
   font-weight: 900;
   margin: 1.5rem 0 0;
 
   @media screen and (min-width:44rem) {
+    font-size: 2em;
     margin: 0;
   }
 }
 
 .show-author {
   text-transform: uppercase;
-  font-size: .75rem;
   line-height: 1.125;
   font-weight: 900;
   white-space: nowrap;
@@ -43,15 +43,19 @@ export default {
     text-decoration: underline;
   }
 
-  @media screen and (min-width:44rem) {
+  @media screen and (min-width: 44rem) {
     white-space: normal;
+    font-size: .75rem;
   }
 }
 
 .show-description {
   margin-top: .5rem;
-  font-size: .875rem;
   text-align: left;
   color: var(--brandMuted);
+
+  @media screen and (min-width: 44rem) {
+    font-size: .875rem;
+  }
 }
 </style>

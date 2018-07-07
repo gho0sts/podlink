@@ -1,9 +1,9 @@
 <template>
   <div class="show-share">
-    <h2 class="show-subhead">Share</h2>
+    <label class="show-subhead" for="share">Share</label>
     <div class="share-row">
       <div class="share-bar">
-        <input onmouseover="this.select()" onmouseleave="this.blur()" v-model="shareableLink" v-clipboard:copy="shareableLink" placeholder="Generating Link...">
+        <input id="share" onmouseover="this.select()" onmouseleave="this.blur()" v-model="shareableLink" v-clipboard:copy="shareableLink" placeholder="Generating Link...">
         <button class="action-copy" type="button" v-clipboard:copy="shareableLink">Copy</button>
       </div>
       <nuxt-link class="action-customize" to="/custom-urls">Customize this URL</nuxt-link>
@@ -51,6 +51,9 @@ export default {
 
 .show-subhead {
   margin: 1.5rem 0 0;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
 
   @media screen and (min-width:44rem) {
     margin: 0 .5rem 0 0;
