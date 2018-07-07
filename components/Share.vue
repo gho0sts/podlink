@@ -2,9 +2,11 @@
   <div class="show-share">
     <h2 class="show-subhead">Share</h2>
     <div class="share-row">
-      <input onmouseover="this.select()" onmouseleave="this.blur()" v-model="shareableLink" v-clipboard:copy="shareableLink" placeholder="Generating Link...">
-      <button class="share-action" type="button" v-clipboard:copy="shareableLink">Copy</button>
-      <nuxt-link class="share-action" to="/custom-urls">Customize this URL</nuxt-link>
+      <div class="share-bar">
+        <input onmouseover="this.select()" onmouseleave="this.blur()" v-model="shareableLink" v-clipboard:copy="shareableLink" placeholder="Generating Link...">
+        <button class="action-copy" type="button" v-clipboard:copy="shareableLink">Copy</button>
+      </div>
+      <nuxt-link class="action-customize" to="/custom-urls">Customize this URL</nuxt-link>
     </div>
   </div>
 </template>
@@ -16,17 +18,16 @@ export default {
   props: ['iTunesID'],
   data () {
     return {
-      shareableLink: `https://pod.link/${this.iTunesID}`,
       redirects
     }
   },
   computed: {
     shareableLink: function () {
-      const array = this.redirects
+      const redirects = this.redirects
       let path = `/${this.iTunesID}`
 
-      if ( array.contains(`/${this.iTunesID}`) ){
-        path = array.find( obj => obj.to === `/${this.iTunesID}` ).from
+      if ( redirects.indexOf(`/${this.iTunesID}` != -1) ){
+        path = redirects.find( obj => obj.to === `/${this.iTunesID}` ).from
       }
 
       return `https://pod.link${path}`
@@ -69,33 +70,62 @@ export default {
   }
 }
 
-input {
+.share-bar {
   width: 100%;
   height: 2em;
-  font-size: inherit;
-  padding: .5em;
-  background: no-repeat center right .25rem var(--brandBgTint);
-  color: var(--brandMuted);
-  color: var(--brandDark);
+  background: var(--brandBgTint);
   border-radius: .25em;
-  border: none;
   margin: .5rem 0;
-  text-overflow: ellipsis;
-  text-align: center;
-
+  padding: 0 .5rem;
+  display: flex;
   @media screen and (min-width:44rem) {
-    text-align: left;
     margin: 0;
   }
 
   &:focus, &:hover {
-      outline: none;
-      box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
-      background-color: var(--resultHover);
+    outline: none;
+    box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
+    background-color: var(--resultHover);
+
+    .action-copy {
+      color: var(--brandPrimary);
+    }
   }
 }
 
-.share-action {
+input {
+  flex: 1;
+  font-size: inherit;
+  padding: .5em .5em .5em 0;
+  color: var(--brandDark);
+  background: transparent;
+  border: none;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 0;
+
+  &:focus {
+      outline: none;
+  }
+
+  @media screen and (min-width:44rem) {
+    text-align: left;
+  }
+}
+
+.action-copy {
+    background: transparent;
+    border: none;
+    padding: .5rem 0;
+    cursor: pointer;
+
+    &:focus, &:hover {
+      outline: none;
+      color: var(--brandPrimary);
+  }
+}
+
+.action-customize {
   background: var(--brandMuted);
   color: #FFF;
   font-size: .875rem;
