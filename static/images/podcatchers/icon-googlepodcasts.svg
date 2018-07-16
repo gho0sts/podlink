@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><title>icon-googlepodcasts</title><path d="M24,48c23.815,0,24-10.745,24-24S47.815,0,24,0,0,10.745,0,24,.185,48,24,48Z" fill="#fff"/><polygon points="22.022 18.246 22.022 23.042 22.022 24.958 22.022 29.754 25.978 29.754 25.978 24.958 25.978 23.042 25.978 18.246 22.022 18.246" fill="#fab908"/><circle cx="10.1538" cy="22.9211" r="1.978" fill="#0066d9"/><circle cx="10.1538" cy="25.0789" r="1.978" fill="#0066d9"/><rect x="8.1758" y="22.9211" width="3.956" height="2.1578" fill="#0066d9"/><circle cx="37.8462" cy="25.0789" r="1.978" fill="#4285f4"/><circle cx="37.8462" cy="22.9211" r="1.978" fill="#4285f4"/><rect x="35.8681" y="22.9211" width="3.956" height="2.1578" fill="#4285f4"/><circle cx="16.987" cy="29.3946" r="1.978" fill="#ea4335"/><circle cx="16.987" cy="31.5524" r="1.978" fill="#ea4335"/><rect x="15.009" y="29.3946" width="3.956" height="2.1578" fill="#ea4335"/><circle cx="16.987" cy="16.4476" r="1.978" fill="#ea4335"/><circle cx="16.987" cy="23.4605" r="1.978" fill="#ea4335"/><rect x="15.009" y="16.4476" width="3.956" height="7.0579" fill="#ea4335"/><circle cx="31.013" cy="18.6054" r="1.978" fill="#34a853"/><circle cx="31.013" cy="16.4476" r="1.978" fill="#34a853"/><rect x="29.035" y="16.4476" width="3.956" height="2.1578" fill="#34a853"/><circle cx="24" cy="12.3117" r="1.978" fill="#fab908"/><circle cx="24" cy="10.1538" r="1.978" fill="#fab908"/><rect x="22.022" y="10.1538" width="3.956" height="2.1578" fill="#fab908"/><circle cx="24" cy="37.8462" r="1.978" fill="#fab908"/><circle cx="24" cy="35.6883" r="1.978" fill="#fab908"/><rect x="22.022" y="35.6883" width="3.956" height="2.1578" fill="#fab908"/><circle cx="31.013" cy="31.5524" r="1.978" fill="#34a853"/><circle cx="31.013" cy="24.5395" r="1.978" fill="#34a853"/><rect x="29.035" y="24.5395" width="3.956" height="7.013" fill="#34a853"/><circle cx="24" cy="18.2458" r="1.978" fill="#fab908"/><circle cx="24" cy="29.7542" r="1.978" fill="#fab908"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<style type="text/css">.pill{fill:none;stroke-width:4;stroke-linecap:round;}</style>
+<path fill="#fff" d="M24,48c23.815,0,24-10.745,24-24S47.815,0,24,0,0,10.745,0,24,.185,48,24,48Z" />
+<line stroke="#fab908" class="pill" x1="24" y1="10.25" x2="24" y2="12.25"/>
+<line stroke="#fab908" class="pill" x1="24" y1="35.75" x2="24" y2="37.75"/>
+<line stroke="#fab908" class="pill" x1="24" y1="18.25" x2="24" y2="29.75"/>
+<line stroke="#ea4335" class="pill" x1="17" y1="16.5" x2="17" y2="23.5"/>
+<line stroke="#ea4335" class="pill" x1="17" y1="29.5" x2="17" y2="31.5"/>
+<line stroke="#34a853" class="pill" x1="31" y1="24.5" x2="31" y2="31.5"/>
+<line stroke="#34a853" class="pill" x1="31" y1="18.5" x2="31" y2="16.5"/>
+<line stroke="#4285f4" class="pill" x1="38" y1="23" x2="38" y2="25"/>
+<line stroke="#0066d9" class="pill" x1="10" y1="23" x2="10" y2="25"/>
+</svg>
