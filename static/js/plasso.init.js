@@ -4,9 +4,9 @@ Plasso.Cart.setup({
   metadata: {
     plans: {
       "my_plan_id": "custom_url",
-      "custom_path" : { "" },
-      "itunes_id" : { "" },
-      "spotify_link" : { "" }
+      "custom_path" : "",
+      "itunes_id" : "",
+      "spotify_link" : ""
     }
   }
 });
