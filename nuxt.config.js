@@ -110,8 +110,6 @@ module.exports = {
     ['@nuxtjs/google-tag-manager', { id: 'GTM-WBRSGC7' }],
   ],
   plugins: [
-    '~plugins/vue-js-modal',
-    { src: '~/plugins/vue-plyr', ssr: false },
-    { src: '~/plugins/localStorage', ssr: false }
+    { src: '~/plugins/vue-plyr', ssr: false }
   ]
 }
