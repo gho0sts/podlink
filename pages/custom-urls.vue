@@ -5,7 +5,6 @@
           <h1>{{heading}}</h1>
           <p>{{description}}</p>
         <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url" class="btn-cta">{{cta}}</a>
-        <!-- <div data-pl-cart-button class="btn-cta">{{cta}}</div> -->
         </div>
     </div>
 </template>
