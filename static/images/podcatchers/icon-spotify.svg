@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-<style>.signal{fill:none;stroke:#181413;stroke-linecap:round;}</style>
+<style>.s{fill:none;stroke:#181413;stroke-linecap:round;}</style>
 <path fill="#181413" d="M24,48c23.815,0,24-10.745,24-24S47.815,0,24,0,0,10.745,0,24,.185,48,24,48Z"/>
 <circle fill="#1ed760" cx="24" cy="24" r="19"/>
-<path stroke-width="2.37" class="signal" d="M31.703,31.7874c-4.7348-2.8936-10.6469-3.5575-17.5725-1.9749"/>
-<path stroke-width="2.96" class="signal" d="M33.776,26.4567c-5.4852-3.3713-13.6675-4.3331-20.1383-2.3692"/>
-<path stroke-width="3.55" class="signal" d="M36.1461,20.3156C29.5585,16.4044,18.9289,16.04,12.65,17.9463"/>
+<path stroke-width="2.37" class="s" d="M31.703,31.7874c-4.7348-2.8936-10.6469-3.5575-17.5725-1.9749"/>
+<path stroke-width="2.96" class="s" d="M33.776,26.4567c-5.4852-3.3713-13.6675-4.3331-20.1383-2.3692"/>
+<path stroke-width="3.55" class="s" d="M36.1461,20.3156C29.5585,16.4044,18.9289,16.04,12.65,17.9463"/>
 </svg>
