@@ -1,11 +1,13 @@
 <template>
   <div class="show-listen">
     <h2 class="show-subhead">Listen</h2>
-    <plyr v-bind:options="options">
-      <audio id="show-player" style="width: 100%;" controls preload="none">
-          <source :src="show.episodes[0].enclosure.url" type="audio/mp3">
-      </audio>
-    </plyr>
+    <no-ssr>
+      <plyr v-bind:options="options">
+        <audio id="show-player" style="width: 100%;" controls preload="none">
+            <source :src="show.episodes[0].enclosure.url" type="audio/mp3">
+        </audio>
+      </plyr>
+    </no-ssr>
   </div>
 </template>
 <script>
