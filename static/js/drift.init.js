@@ -1,5 +1,3 @@
-<!-- Start of Async Drift Code -->
-<script>
 "use strict";
 
 !function() {
@@ -24,5 +22,3 @@
 }();
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('cknbw78uyyk7');
-</script>
-<!-- End of Async Drift Code -->
