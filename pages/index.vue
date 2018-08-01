@@ -12,6 +12,13 @@ import SearchBar from '~/components/SearchBar.vue'
 export default {
   name: 'Home',
   components: { IconLogo, SearchBar },
+  head () {
+    return {
+      script: [
+        { src: '/js/drfit.init.js' }
+      ]
+    } 
+  },
   data () {
     return {
       title: 'PodLink',

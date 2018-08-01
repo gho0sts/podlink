@@ -19,7 +19,8 @@ export default {
     return {
       script: [
         { src: 'https://plasso.com/embed/storefront.1.0.js' },
-        { src: '/js/plasso.init.js' }
+        { src: '/js/plasso.init.js' },
+        { src: '/js/drfit.init.js' }
       ]
     } 
   },
