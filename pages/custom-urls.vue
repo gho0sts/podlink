@@ -20,7 +20,7 @@ export default {
       script: [
         { src: 'https://plasso.com/embed/storefront.1.0.js' },
         { src: '/js/plasso.init.js' },
-        { src: '/js/drfit.init.js' }
+        { src: '/js/drift.init.js' }
       ]
     } 
   },

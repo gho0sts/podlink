@@ -15,7 +15,7 @@ export default {
   head () {
     return {
       script: [
-        { src: '/js/drfit.init.js' }
+        { src: '/js/drift.init.js' }
       ]
     } 
   },
