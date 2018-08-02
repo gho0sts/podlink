@@ -25,15 +25,15 @@ export default {
         meta: [
           { hid: 'og:title', property: 'og:title', content: `${this.show.title} — PodLink` },
           { hid: 'twitter:title', name: 'twitter:title', content: `${this.show.title} — PodLink` },
-          { hid: 'description', name: 'description', content: this.show.description },
-          { hid: 'og:description', property: 'og:description', content: this.show.description },
-          { hid: 'twitter:description', name: 'twitter:description', content: this.show.description },
+          { hid: 'description', name: 'description', content: this.show.description.long },
+          { hid: 'og:description', property: 'og:description', content: this.show.description.long },
+          { hid: 'twitter:description', name: 'twitter:description', content: this.show.description.long },
           { hid: 'og:image', property: 'og:image', content: this.itunes.artworkUrl600 },
           { hid: 'twitter:image', name: 'twitter:image', content: '/apple-touch-icon.png' },
           { 
             hid: 'description', 
             name: 'description', 
-            content: this.show.description
+            content: this.show.description.long
           },
           { 
             hid: 'og:title', 
@@ -43,7 +43,7 @@ export default {
           { 
             hid: 'og:description', 
             property: 'og:description', 
-            content: this.show.description
+            content: this.show.description.long
           },
           { 
             hid: 'og:image', 
@@ -63,7 +63,7 @@ export default {
           { 
             hid: 'twitter:description', 
             name: 'twitter:description', 
-            content: this.show.description
+            content: this.show.description.long
           },
           { 
             hid: 'twitter:image', 
