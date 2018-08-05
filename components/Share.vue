@@ -6,7 +6,7 @@
         <input id="share" onmouseover="this.select()" onmouseleave="this.blur()" v-model="shareableLink" v-clipboard:copy="shareableLink" placeholder="Generating Link...">
         <button class="action-copy" type="button" v-clipboard:copy="shareableLink">Copy</button>
       </div>
-      <nuxt-link class="action-customize" to="/custom-urls">Customize this URL</nuxt-link>
+      <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url" class="action-customize">Customize this URL</a>
     </div>
   </div>
 </template>
@@ -16,6 +16,15 @@ const redirects = require('../301.json')
 export default {
   name: 'Share',
   props: ['iTunesID'],
+  head () {
+    return {
+      script: [
+        { src: 'https://plasso.com/embed/storefront.1.0.js' },
+        { src: '/js/plasso.init.js' },
+        { src: '/js/drift.init.js' }
+      ]
+    } 
+  },
   data () {
     return {
       redirects
@@ -66,9 +75,12 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 
-  @media screen and (min-width:44rem) {
+  @media screen and (min-width:30rem) {
     flex-wrap: nowrap;
     align-items: center;
+  }
+
+  @media screen and (min-width:44rem) {
     flex: 1;
   }
 }
@@ -81,7 +93,8 @@ export default {
   margin: .5rem 0;
   padding: 0 .5rem;
   display: flex;
-  @media screen and (min-width:44rem) {
+
+  @media screen and (min-width:30rem) {
     margin: 0;
   }
 
@@ -111,7 +124,7 @@ input {
       outline: none;
   }
 
-  @media screen and (min-width:44rem) {
+  @media screen and (min-width:30rem) {
     text-align: left;
   }
 }
