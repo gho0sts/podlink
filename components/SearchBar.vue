@@ -66,6 +66,7 @@ input {
     border-radius: .25em;
     margin: .5rem 0;
     border: none;
+    -webkit-appearance: none;
 
     &:focus, &:hover {
         outline: none;
