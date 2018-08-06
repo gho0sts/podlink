@@ -28,18 +28,20 @@ export default {
       this.toggled = !this.toggled;
     },
     truncate(text) {
-      if (text.length > this.limit) {
-        for (let i = this.limit; i > 0; i--) {
-          const currChar = text.charAt(i);
-          const prevChar = text.charAt(i - 1);
-          const prevCharNotPuncuation = prevChar != ',' || prevChar != '.' || prevChar != '.';
-          if (currChar === ' ' && prevCharNotPuncuation) {
-            return text.substring(0, i) + '...';
+      if (text) {
+        if (text.length > this.limit) {
+          for (let i = this.limit; i > 0; i--) {
+            const currChar = text.charAt(i);
+            const prevChar = text.charAt(i - 1);
+            const prevCharNotPuncuation = prevChar != ',' || prevChar != '.' || prevChar != '.';
+            if (currChar === ' ' && prevCharNotPuncuation) {
+              return text.substring(0, i) + '...';
+            }
           }
+        } else {
+          this.long = false;
+          return text;
         }
-      } else {
-        this.long = false;
-        return text;
       }
     }
   }

@@ -2,7 +2,7 @@
   <div class="show-info">
     <h1 class="show-title">{{show.title}}</h1>
     <a class="show-author" :href="show.link">{{show.author}}</a>
-    <ReadMore class="show-description" v-bind:text="show.description.long" />
+    <ReadMore class="show-description" v-if="show.description.long" v-bind:text="show.description.long" />
   </div>
 </template>
 <script>
