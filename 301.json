@@ -25,5 +25,6 @@
     { "from": "/topfour", "to": "/1031275903" },
     { "from": "/radar", "to": "/1055685246" },
     { "from": "/ungeniused", "to": "/1122025600" },
-    { "from": "/upgrade", "to": "/918152703" }
+    { "from": "/upgrade", "to": "/918152703" },
+    { "from": "/substack", "to": "/1418948779" }
 ]
