@@ -2,11 +2,11 @@
   <div class="show-listen">
     <h2 class="show-listen-subhead">Listen</h2>
     <no-ssr>
-      <plyr v-bind:options="options">
+      <vue-plyr v-bind:options="options">
         <audio id="show-player" style="width: 100%;" controls preload="none">
             <source :src="show.episodes[0].enclosure.url" type="audio/mp3">
         </audio>
-      </plyr>
+      </vue-plyr>
     </no-ssr>
   </div>
 </template>
