@@ -1,10 +1,8 @@
 <template>
   <main class="show">
     <Artwork class="show-media" v-bind="{itunes}"/>
-    <div class="show-details">
-      <Info class="show-info" v-bind="{show}"/>
-      <Subscribe v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
-    </div>
+    <Info class="show-info" v-bind="{show}"/>
+    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
     <Listen v-bind="{show}"/>
     <Share v-bind:iTunesID="itunes.collectionId"/>
   </main>
@@ -42,6 +40,7 @@ $gridgapLG: 1.5rem;
     grid-template-columns: 1fr 31rem;
     grid-template-areas: 
       "🖼 ✏️"
+      "🖼 🔗"
       "🎧 🎧"
       "🎉 🎉";
     align-items: flex-start;
@@ -51,8 +50,13 @@ $gridgapLG: 1.5rem;
       grid-area: 🖼;
     }
 
-    .show-details {
+    .show-info {
       grid-area: ✏️;
+      text-align: left;
+    }
+
+    .show-subscribe {
+      grid-area: 🔗;
       text-align: left;
     }
 
@@ -67,15 +71,6 @@ $gridgapLG: 1.5rem;
     .show-share {
       grid-area: 🎉;
     }
-  }
-}
-
-.show-details {
-  display: grid;
-  grid-gap: $gridgapSM;
-
-  @media screen and (min-width:44rem) {
-    grid-gap: $gridgapLG;
   }
 }
 </style>
