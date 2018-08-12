@@ -49,7 +49,7 @@ export default {
   height: 3rem;
   display: block;
   margin: .25rem;
-  border-radius: .75rem;
+  border-radius: var(--borderradius);
   overflow: hidden;
 
   &:hover {

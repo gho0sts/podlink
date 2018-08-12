@@ -50,7 +50,7 @@ export default {
     background: var(--brandPrimary);
     color: #FFF;
     padding: 1rem 1.5rem;
-    border-radius: .25rem;
+    border-radius: var(--borderradius);
     text-decoration: none;
     font-size: 1.25rem;
   }

@@ -8,6 +8,8 @@
   --brandDark: #000000;
   --brandMuted: #767676;
   --resultHover: #FFF;
+
+  --borderradius: .5rem;
 }
 
 html {
