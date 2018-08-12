@@ -26,10 +26,37 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 .show-listen {
   width: 100%;
+
+  .plyr {
+    z-index: 1;
+  }
+
+  .plyr--audio .plyr__controls {
+    margin-top: .25rem;
+    box-shadow: 0 0 2em -.5rem var(--brandMuted);
+    border-radius: .5rem;
+    padding: 0 .125rem;
+    background: var(--brandBgTint);
+
+    @media screen and (min-width:44rem) {
+      margin-top: 0;
+      box-shadow: none;
+    }
+  }
+
+  .plyr--audio .plyr__control.plyr__tab-focus, 
+  .plyr--audio .plyr__control:hover, 
+  .plyr--audio .plyr__control[aria-expanded=true] {
+    background: var(--brandPrimary);
+  }
+
+  .plyr--full-ui input[type=range] {
+    color: var(--brandPrimary);
+  }
 }
 
 .show-listen-subhead {
