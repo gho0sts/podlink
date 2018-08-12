@@ -42,7 +42,7 @@ export default {
   height: 100%;
   display: block;
   z-index: 1;
-  border-radius: .5em;
+  border-radius: var(--borderradius);
 }
 
 .show-artwork-spacer {
@@ -50,7 +50,7 @@ export default {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: .5em;
+  border-radius: var(--borderradius);
   overflow: hidden;
   background: #FFF;
   fill: var(--brandBgTint);

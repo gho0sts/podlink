@@ -89,7 +89,7 @@ export default {
   width: 100%;
   height: 2em;
   background: var(--brandBgTint);
-  border-radius: .25em;
+  border-radius: var(--borderradius);
   margin: .5rem 0;
   padding: 0 .5rem;
   display: flex;
@@ -149,7 +149,7 @@ input {
   border: none;
   height: 2rem;
   padding: .5rem 1rem;
-  border-radius: .25rem;
+  border-radius: var(--borderradius);
   margin: 0 0 0 .5rem;
   border: none;
   white-space: nowrap;

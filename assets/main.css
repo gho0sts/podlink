@@ -64,32 +64,3 @@ svg {
 .page-enter, .page-leave-to {
   opacity: 0;
 }
-
-.show-listen .plyr {
-  z-index: 1;
-}
-
-.show-listen .plyr--audio .plyr__controls {
-  margin-top: .25rem;
-  box-shadow: 0 0 2em -.5rem var(--brandMuted);
-  border-radius: .5rem;
-  padding: 0 .125rem;
-  background: var(--brandBgTint);
-}
-
-@media screen and (min-width:44rem) {
-  .show-listen  .plyr--audio .plyr__controls {
-    margin-top: 0;
-    box-shadow: none;
-  }
-}
-
-.show-listen .plyr--audio .plyr__control.plyr__tab-focus, 
-.show-listen .plyr--audio .plyr__control:hover, 
-.show-listen .plyr--audio .plyr__control[aria-expanded=true] {
-  background: var(--brandPrimary);
-}
-
-.show-listen .plyr--full-ui input[type=range] {
-  color: var(--brandPrimary);
-}
