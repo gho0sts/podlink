@@ -1,6 +1,6 @@
 <template>
   <div class="show-listen">
-    <h2 class="show-subhead">Listen</h2>
+    <h2 class="show-listen-subhead">Listen</h2>
     <no-ssr>
       <plyr v-bind:options="options">
         <audio id="show-player" style="width: 100%;" controls preload="none">
@@ -32,13 +32,11 @@ export default {
   width: 100%;
 }
 
-.show-subhead {
+.show-listen-subhead {
   margin: 1.5rem 0 0;
 
   @media screen and (min-width:44rem) {
-    .show-listen & {
-      display: none;
-    }
+    display: none;
   }
 }
 

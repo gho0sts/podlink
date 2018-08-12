@@ -1,6 +1,6 @@
 <template>
   <div class="show-share">
-    <label class="show-subhead" for="share">Share</label>
+    <label class="show-share-subhead" for="share">Share</label>
     <div class="share-row">
       <div class="share-bar">
         <input id="share" onmouseover="this.select()" onmouseleave="this.blur()" v-model="shareableLink" v-clipboard:copy="shareableLink" placeholder="Generating Link...">
@@ -58,15 +58,14 @@ export default {
   }
 }
 
-.show-subhead {
+.show-share-subhead {
   margin: 1.5rem 0 0;
   display: block;
   font-size: 1.5em;
   font-weight: bold;
 
   @media screen and (min-width:44rem) {
-    margin: 0 .5rem 0 0;
-    font-size: 1.25rem;
+    display: none;
   }
 }
 
