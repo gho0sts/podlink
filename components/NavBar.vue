@@ -40,8 +40,8 @@ export default {
     fill: var(--brandPrimary);
   }
 
-  &:hover svg {
-    fill: var(--brandDark);
+  &:hover {
+    transform: scale(1.166666667);
   }
 }
 
