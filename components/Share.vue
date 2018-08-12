@@ -100,7 +100,7 @@ export default {
 
   &:focus, &:hover {
     outline: none;
-    box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
+    box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
     background-color: var(--resultHover);
 
     .action-copy {

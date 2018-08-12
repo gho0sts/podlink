@@ -70,7 +70,7 @@ input {
 
     &:focus, &:hover {
         outline: none;
-        box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
+        box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
         background-color: var(--resultHover);
         background-image: none;
     }
@@ -125,7 +125,7 @@ input {
     &:hover, &:focus {
         background: var(--resultHover);
         outline: none;
-        box-shadow: 0 0.5em 1.5em -0.5em var(--brandPrimary);
+        box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
     }
 }
 
