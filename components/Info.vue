@@ -21,11 +21,9 @@ export default {
   font-size: 2.5em;
   line-height: 1.125;
   font-weight: 900;
-  margin: 1.5rem 0 0;
 
   @media screen and (min-width:44rem) {
     font-size: 2em;
-    margin: 0;
   }
 }
 

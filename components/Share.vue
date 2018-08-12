@@ -1,6 +1,5 @@
 <template>
   <div class="show-share">
-    <label class="show-share-subhead" for="share">Share</label>
     <div class="share-row">
       <div class="share-bar">
         <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="shareableLink" >{{shareableLink}}</div>
@@ -61,17 +60,6 @@ export default {
   @media screen and (min-width:44rem) {
     display: flex;
     align-items: center;
-  }
-}
-
-.show-share-subhead {
-  margin: 1.5rem 0 0;
-  display: block;
-  font-size: 1.5em;
-  font-weight: bold;
-
-  @media screen and (min-width:44rem) {
-    display: none;
   }
 }
 

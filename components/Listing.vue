@@ -24,31 +24,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$gridgapSM: 2rem;
+$gridgapLG: 1.5rem;
 
 .show {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 7rem 1.5rem 1.5rem;
   text-align: center;
+  display: grid;
+  grid-gap: $gridgapSM;
 
   @supports(padding: max(0px)) {
     padding-left: unquote('max(1.5rem, env(safe-area-inset-left))');
     padding-right: unquote('max(1.5rem, env(safe-area-inset-right))');
   }
-}
 
-@media screen and (min-width:44rem) {
-  .show {
-    display: grid;
+  @media screen and (min-width:44rem) {
     grid-template-columns: 1fr 31rem;
     grid-template-areas: 
       "🖼 ✏️"
       "🎧 🎧"
       "🎉 🎉";
-    grid-gap: 1.5rem;
     align-items: flex-start;
+    grid-gap: $gridgapLG;
 
     .show-media {
       grid-area: 🖼;
@@ -70,6 +67,15 @@ export default {
     .show-share {
       grid-area: 🎉;
     }
+  }
+}
+
+.show-details {
+  display: grid;
+  grid-gap: $gridgapSM;
+
+  @media screen and (min-width:44rem) {
+    grid-gap: $gridgapLG;
   }
 }
 </style>
