@@ -106,10 +106,14 @@ module.exports = {
     '~/servermiddleware/seo.js'
   ],
   modules: [
+    '@nuxtjs/axios',
     'nuxt-clipboard2',
     ['@nuxtjs/google-tag-manager', { id: 'GTM-WBRSGC7' }],
   ],
   plugins: [
     { src: '~/plugins/vue-plyr', ssr: false }
-  ]
+  ],
+  axios: {
+    credentials: false
+  }
 }
