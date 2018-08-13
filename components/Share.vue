@@ -2,19 +2,17 @@
   <div class="show-share">
     <div class="share-row">
       <div class="share-bar">
-        <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="shareableLink" >{{shareableLink}}</div>
-        <button class="action-copy" type="button" v-clipboard:copy="shareableLink">Copy</button>
+        <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="customLink" >{{customLink}}</div>
+        <button class="action-copy" type="button" v-clipboard:copy="customLink">Copy</button>
       </div>
-      <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url" class="action-customize">Customize this URL</a>
     </div>
   </div>
 </template>
 <script>
-const redirects = require('../301.json')
 
 export default {
   name: 'Share',
-  props: ['iTunesID'],
+  props: ['iTunesID','customLink'],
   head () {
     return {
       script: [
@@ -23,23 +21,6 @@ export default {
         { src: '/js/drift.init.js' }
       ]
     } 
-  },
-  data () {
-    return {
-      redirects
-    }
-  },
-  computed: {
-    shareableLink: function () {
-      const result = this.redirects.find( obj => obj.to === `/${this.iTunesID}` );
-      let path = `/${this.iTunesID}`
-
-      if ( result ){
-        path = result.from
-      }
-
-      return `https://pod.link${path}`
-    }
   },
   methods: {
     selectText: function (event) {
@@ -133,25 +114,6 @@ export default {
     &:focus, &:hover {
       outline: none;
       color: var(--brandPrimary);
-  }
-}
-
-.action-customize {
-  background: var(--brandMuted);
-  color: #FFF;
-  font-size: .875rem;
-  text-decoration: none;
-  border: none;
-  height: 2rem;
-  padding: .5rem 1rem;
-  border-radius: var(--borderradius);
-  margin: 0 0 0 .5rem;
-  border: none;
-  white-space: nowrap;
-  cursor: pointer;
-
-  &:hover {
-    background: var(--brandPrimary);
   }
 }
 

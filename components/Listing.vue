@@ -2,9 +2,11 @@
   <main class="show">
     <Artwork class="show-media" v-bind="{itunes}"/>
     <Info class="show-info" v-bind="{show}"/>
-    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" />
+    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-if="links" v-bind:links="links" />
+    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-if="!links" />
     <Listen v-bind="{show}"/>
-    <Share v-bind:iTunesID="itunes.collectionId"/>
+    <Share v-bind:iTunesID="itunes.collectionId" v-bind:customLink="sharableLink"/>
+    <Upsell v-if="!premium"/>
   </main>
 </template>
 <script>
@@ -13,11 +15,12 @@ import Info from '~/components/Info.vue'
 import Subscribe from '~/components/Subscribe.vue'
 import Listen from '~/components/Listen.vue'
 import Share from '~/components/Share.vue'
+import Upsell from '~/components/Upsell.vue'
 
 export default {
   name: 'Listing',
-  props: ['itunes','show'],
-  components: { Artwork, Info, Subscribe, Listen, Share }
+  props: ['show','itunes','premium','sharableLink','links'],
+  components: { Artwork, Info, Subscribe, Listen, Share, Upsell },
 }
 </script>
 
@@ -37,11 +40,12 @@ $gridgapLG: 1.5rem;
   }
 
   @media screen and (min-width:44rem) {
-    grid-template-columns: 1fr 31rem;
+    grid-template-columns: 192px 1fr;
     grid-template-areas: 
       "🖼 ✏️"
-      "🖼 🔗"
-      "🎧 🎧"
+      "🖼 🎧"
+      "⏯ ⏯"
+      "🔗 🔗"
       "🎉 🎉";
     align-items: flex-start;
     grid-gap: $gridgapLG;
@@ -56,7 +60,7 @@ $gridgapLG: 1.5rem;
     }
 
     .show-subscribe {
-      grid-area: 🔗;
+      grid-area: 🎧;
       text-align: left;
     }
 
@@ -65,12 +69,20 @@ $gridgapLG: 1.5rem;
     }
     
     .show-listen {
-      grid-area: 🎧;
+      grid-area: ⏯;
     }
 
     .show-share {
+      grid-area: 🔗;
+    }
+
+    .show-upsell {
       grid-area: 🎉;
     }
+  }
+
+  @media screen and (min-width:60rem) {
+    grid-template-columns: 256px 1fr;
   }
 }
 </style>

@@ -26,6 +26,11 @@
     { "from": "/radar", "to": "/1055685246" },
     { "from": "/ungeniused", "to": "/1122025600" },
     { "from": "/upgrade", "to": "/918152703" },
-    { "from": "/substack", "to": "/1418948779" },
+    { "from": "/substack", "to": "/1418948779", 
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/2BAHDwzmLkYk6T2wwW4IN4?si=ickqAoUUTeaw2g02FucaXg",
+            "stitcher" : "https://www.stitcher.com/podcast/substack/the-substack-podcast"
+        } 
+    },
     { "from": "/hallmarkbaptistchurch", "to": "/988947559" }
 ]
