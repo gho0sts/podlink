@@ -34,11 +34,7 @@ module.exports = {
     methods: {
         search:function() {
 			this.searching = true;
-			fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=10&media=podcast`), {
-                headers: {
-                    "Allow-Control-Allow-Origin": "*",
-                },
-            }
+			fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=10&media=podcast`)
 			.then(res => res.json())
 			.then(res => {
 				this.searching = false;
