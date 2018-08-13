@@ -1,7 +1,6 @@
 <template>
     <div>
         <input v-model="term" type="search" @input="search" aria-label="Search for a podcast" placeholder="Search for a podcast">
-
         <transition-group tag="ul" name="results" class="search-results">
             <li v-for="result in results" class="result" :key="result.collectionId">
                 <a :href="'/'+result.collectionId" class="result-link">
@@ -13,11 +12,9 @@
                 </a>
             </li>
         </transition-group>
-
         <div class="search-noresults" v-if="noResults && term">
             Sorry, but no results were found.
         </div>
-
         <div class="search-searching" v-if="searching">
             <i>Searching...</i>
         </div>
@@ -37,7 +34,12 @@ module.exports = {
     methods: {
         search:function() {
 			this.searching = true;
-			fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=10&media=podcast`)
+			fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=10&media=podcast`), {
+                mode: "no-cors",
+                headers: {
+                    "Allow-Control-Allow-Origin": "*",
+                },
+            }
 			.then(res => res.json())
 			.then(res => {
 				this.searching = false;
