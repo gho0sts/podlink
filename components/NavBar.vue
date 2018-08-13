@@ -35,6 +35,7 @@ export default {
 
 .nav-logo {
   grid-area: 🎙;
+  height: 3rem;
 
   svg {
     fill: var(--brandPrimary);
