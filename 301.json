@@ -32,5 +32,7 @@
             "stitcher" : "https://www.stitcher.com/podcast/substack/the-substack-podcast"
         } 
     },
-    { "from": "/hallmarkbaptistchurch", "to": "/988947559" }
+    { "from": "/hallmarkbaptistchurch", "to": "/988947559" },
+    { "from": "/artfunk", "to": "/975392563" },
+    { "from": "/artfunkpodcast", "to": "/975392563" }
 ]
