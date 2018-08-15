@@ -22,45 +22,49 @@
 </template>
 
 <script>
-module.exports = {
-  name: 'SearchBar',
-  data () {
-    return {
-      term:'',
-      results:[],
-      noResults:false,
-      searching:false
+  module.exports = {
+    name: 'SearchBar',
+    data() {
+      return {
+        term: '',
+        results: [],
+        noResults: false,
+        searching: false
+      }
+    },
+    methods: {
+      search: function() {
+        this.searching = true;
+        fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=10&media=podcast`)
+          .then(res => res.json())
+          .then(res => {
+            this.searching = false;
+            this.results = res.results;
+            this.noResults = this.results.length === 0;
+          });
+      }
     }
-  },
-  methods: {
-    search:function() {
-			this.searching = true;
-			fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(this.term)}&limit=10&media=podcast`)
-			.then(res => res.json())
-			.then(res => {
-				this.searching = false;
-				this.results = res.results;
-				this.noResults = this.results.length === 0;
-			});
-		}
   }
-}
 </script>
 
 <style scoped lang="scss">
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--brandMuted);
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
   }
-
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  
+   :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: var(--brandMuted);
   }
-
-  ::-ms-input-placeholder { /* Microsoft Edge */
+  
+   ::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: var(--brandMuted);
   }
-
+  
   input {
     width: 100%;
     height: 2em;
@@ -74,18 +78,19 @@ module.exports = {
     margin: .5rem 0;
     border: none;
     -webkit-appearance: none;
-
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       outline: none;
       box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
       background-color: var(--resultHover);
     }
   }
-
-  .search-noresults, .search-searching {
+  
+  .search-noresults,
+  .search-searching {
     padding: 2rem 0 calc(100vh - 7.625rem);
   }
-
+  
   .search-results {
     font-size: 1rem;
     list-style: none;
@@ -94,32 +99,28 @@ module.exports = {
     max-width: 100vw;
     margin: 0;
     background: var(--brandBackground);
-
     .site-nav & {
       width: 100vw;
       margin: 0 -5rem;
       max-width: 34rem;
-
-      @media screen and (min-width:44rem) {
+      @media screen and (min-width: 44rem) {
         max-width: 51.5rem;
       }
     }
-
     .site-intro & {
       width: 100vw;
       margin: 0 -1.5rem;
       max-width: 33rem;
     }
   }
-
+  
   .result {
     display: block;
-
     &:first-child {
       margin-top: 1rem;
     }
   }
-
+  
   .result-link {
     display: flex;
     align-items: center;
@@ -127,39 +128,40 @@ module.exports = {
     padding: 1rem;
     overflow: hidden;
     border-radius: var(--borderradius);
-    
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: var(--resultHover);
       outline: none;
       box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
     }
   }
-
+  
   .result-img {
     width: 4rem;
     height: 4rem;
     object-fit: cover;
     border-radius: var(--borderradius);
   }
-
+  
   .result-text {
     padding-left: 1rem;
     width: 100%;
     flex: 1;
     min-width: 0;
   }
-
-  .result-name, .result-publisher {
+  
+  .result-name,
+  .result-publisher {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-
+  
   .result-name {
     font-weight: 900;
     color: var(--brandDark);
   }
-
+  
   .result-publisher {
     color: var(--brandMuted);
   }

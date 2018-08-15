@@ -1,12 +1,10 @@
 :root {
-  --brandBackground: hsl(220, 14%, 92%);
+  --brandBackground: hsl(227, 13%, 97%);
   --brandPrimary: hsl(227, 90%, 60%);
-  --brandDark: hsl(227, 50%, 15%);
-  --brandMuted: hsla(227, 50%, 15%, 0.5);
-  --brandBgTint: hsla(227, 50%, 15%, 0.05);
-
-  --brandDark: #000000;
-  --brandMuted: #767676;
+  --brandDark: hsl(227, 2%, 5%);
+  --brandRecessed: hsl(227, 5%, 38%);
+  --brandMuted: hsl(227, 18%, 69%);
+  --brandBgTint: rgba(19, 27, 57, 0.05);
   --resultHover: #FFF;
 
   --borderradius: .5rem;
@@ -50,9 +48,7 @@ svg {
 
 #page {
   margin: 0 auto;
-  max-width: 934px; // ( 11 * 56px ) + 318px
-  max-width: 58.375rem; 
-  max-width: calc( (var(--apps) * 3.5rem) + 19.875rem);
+  max-width: calc( (var(--apps) * 3.5rem) + 19.875rem); // ( 11 * 56px ) + 318px == 934px == 58.375rem
   position: relative;
 }
 

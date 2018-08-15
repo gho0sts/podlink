@@ -50,7 +50,7 @@ export default {
 .show-description {
   margin-top: .5rem;
   text-align: left;
-  color: var(--brandMuted);
+  color: var(--brandRecessed);
 
   @media screen and (min-width: 44rem) {
     font-size: .875rem;

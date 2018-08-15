@@ -74,7 +74,8 @@ export default {
 
   &:focus, &:hover {
     outline: none;
-    box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
+    transform: translateY(-4px);
+    box-shadow: 0 0.75em 1.5em -0.5em var(--brandMuted);
     background-color: var(--resultHover);
 
     .action-copy {
@@ -108,7 +109,7 @@ export default {
 .action-copy {
     background: transparent;
     border: none;
-    padding: .5rem 0;
+    padding: .5rem .5rem .5rem 0;
     cursor: pointer;
 
     &:focus, &:hover {
