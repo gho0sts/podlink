@@ -49,7 +49,8 @@ export default {
     text-align: left;
 
     @media screen and (min-width:44rem) {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
       left: 6rem;
     }
   }
@@ -70,7 +71,7 @@ export default {
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 17px;
     margin-bottom: 6px;
 
     &:hover {
@@ -80,7 +81,7 @@ export default {
     @media screen and (min-width:44rem) {
       width: 4rem;
       height: 4rem;
-      padding: 0 0 0 20px;
+      padding: 0 0 0 24px;
     }
   }
 
