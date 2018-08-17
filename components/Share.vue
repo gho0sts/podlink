@@ -45,7 +45,6 @@ export default {
 <style scoped lang="scss">
 
 .show-share {
-  width: 100%;
 
   @media screen and (min-width:44rem) {
     display: flex;
@@ -54,30 +53,32 @@ export default {
 }
 
 .share-row {
-  display: grid;
-  grid-gap: .75rem;
+  flex: 1;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 2rem 2rem;
 
-  @media screen and (min-width:30rem) {
+  @media screen and (min-width:25rem) {
     flex-wrap: nowrap;
     align-items: center;
-  }
-
-  @media screen and (min-width:44rem) {
-    flex: 1;
   }
 }
 
 .share-bar {
-  width: 100%;
   height: 2em;
   background: var(--brandBgTint);
   border-radius: var(--borderradius);
   padding: 0 .5rem;
   display: flex;
+  width: 100%;
+  margin-bottom: .75rem;
+
+  @media screen and (min-width:25rem) {
+    flex: 1;
+    width: auto;
+    margin-bottom: 0;
+  }
 
   &:focus, &:hover {
     outline: none;
@@ -108,7 +109,7 @@ export default {
       outline: none;
   }
 
-  @media screen and (min-width:30rem) {
+  @media screen and (min-width:25rem) {
     text-align: left;
   }
 }
@@ -129,7 +130,14 @@ export default {
   background: var(--brandBgTint);
   color: var(--brandRecessed);
   border-radius: var(--borderradius);
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  margin-left: .75rem;
+
+  @media screen and (min-width:25rem) {
+    width: 2rem;
+    height: 2rem;
+  }
 
   &:focus, &:hover {
     outline: none;

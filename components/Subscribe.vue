@@ -37,8 +37,18 @@ export default {
   justify-content: center;
   margin: 0 -5px;
 
+  margin: 0 auto;
+  max-width: calc(var(--apps) / 2 * 62px);
+
   @media screen and (min-width:44rem) {
     justify-content: flex-start;
+    margin-left: -5px;
+  }
+
+  @media screen and (min-width:55rem) {
+    justify-content: flex-start;
+    margin-right: -5px;
+    max-width: none;
   }
 }
 
