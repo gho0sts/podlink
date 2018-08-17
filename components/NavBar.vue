@@ -22,7 +22,6 @@ export default {
   grid-template-columns: 3rem 1fr;
   grid-gap: .5rem;
   width: 100%;
-  max-width: calc(var(--apps) * 3.5rem + 8.75rem);
   padding: 1.5rem 1.5rem 0;
   position: absolute;
   z-index: 2;
