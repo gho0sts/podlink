@@ -108,7 +108,7 @@ export default {
 
   .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true] {
     background: transparent;
-    color: #4f5b5f;
+    fill: var(--brandRecessed);
     transition: all .2s ease;
   }
 
