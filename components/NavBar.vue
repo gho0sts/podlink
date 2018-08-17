@@ -21,11 +21,16 @@ export default {
   grid-template-areas: "🎙 🔍";
   grid-template-columns: 3rem 1fr;
   grid-gap: .5rem;
-  width: calc(var(--apps) * 3.5rem + 19.875rem);
+  width: 100%;
+  max-width: calc(var(--apps) * 3.5rem + 8.75rem);
   padding: 1.5rem 1.5rem 0;
   position: absolute;
   z-index: 2;
   background: var(--brandBackground);
+
+  @media screen and (min-width:44rem) {
+    max-width: calc(var(--apps) * 3.5rem + 19.875rem);
+  }
 
   @supports(padding: max(0px)) {
     padding-left: unquote('max(1.5rem, env(safe-area-inset-left))');

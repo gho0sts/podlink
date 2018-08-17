@@ -49,10 +49,14 @@ export default {
 </script>
 <style scoped>
 button {
-    padding: 0;
-    margin: 0;
-    border: none;
-    color: var(--brandPrimary);
-    background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: var(--brandPrimary);
+  background: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>

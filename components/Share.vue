@@ -2,17 +2,26 @@
   <div class="show-share">
     <div class="share-row">
       <div class="share-bar">
-        <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="customLink" >{{customLink}}</div>
-        <button class="action-copy" type="button" v-clipboard:copy="customLink">Copy</button>
+        <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="sharableLink" >{{sharableLink}}</div>
+        <button class="action-copy" type="button" v-clipboard:copy="sharableLink">Copy</button>
       </div>
+      <a class="social-share" target="_blank" :href="facebookLink"><IconFacebook /></a>
+      <a class="social-share" target="_blank" :href="twitterLink"><IconTwitter /></a>
     </div>
   </div>
 </template>
 <script>
+import IconFacebook from '~/components/IconFacebook.vue'
+import IconTwitter from '~/components/IconTwitter.vue'
 
 export default {
   name: 'Share',
-  props: ['iTunesID','customLink'],
+  components: { IconFacebook, IconTwitter },
+  props: ['iTunesID','sharableLink','title'],
+  computed: {
+    facebookLink: function () { return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.sharableLink)},
+    twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20app%20of%20choice'}
+  },
   head () {
     return {
       script: [
@@ -45,9 +54,12 @@ export default {
 }
 
 .share-row {
-  display: flex;
+  display: grid;
+  grid-gap: .75rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 2rem 2rem;
 
   @media screen and (min-width:30rem) {
     flex-wrap: nowrap;
@@ -64,13 +76,8 @@ export default {
   height: 2em;
   background: var(--brandBgTint);
   border-radius: var(--borderradius);
-  margin: .5rem 0;
   padding: 0 .5rem;
   display: flex;
-
-  @media screen and (min-width:30rem) {
-    margin: 0;
-  }
 
   &:focus, &:hover {
     outline: none;
@@ -115,6 +122,32 @@ export default {
     &:focus, &:hover {
       outline: none;
       color: var(--brandPrimary);
+  }
+}
+
+.social-share:link, .social-share:visited {
+  background: var(--brandBgTint);
+  color: var(--brandRecessed);
+  border-radius: var(--borderradius);
+  height: 2rem;
+
+  &:focus, &:hover {
+    outline: none;
+    transform: translateY(-4px);
+    box-shadow: 0 0.75em 1.5em -0.5em var(--brandMuted);
+    background-color: var(--resultHover);
+
+    svg {
+      fill: var(--brandPrimary);
+    }
+
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition-duration: 0;
   }
 }
 

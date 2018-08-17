@@ -71,7 +71,7 @@ export default {
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    padding: 0 0 0 17px;
+    padding: 0 0 0 16px;
     margin-bottom: 6px;
 
     &:hover {
@@ -81,7 +81,7 @@ export default {
     @media screen and (min-width:44rem) {
       width: 4rem;
       height: 4rem;
-      padding: 0 0 0 24px;
+      padding: 0 0 0 22px;
     }
   }
 

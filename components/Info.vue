@@ -1,7 +1,8 @@
 <template>
   <div class="show-info">
     <h1 class="show-title">{{show.title}}</h1>
-    <a class="show-author" :href="show.link">{{show.author}}</a>
+    <a class="show-author" v-if="show.link" :href="show.link">{{show.author}}</a>
+    <span class="show-author" v-if="!show.link" >{{show.author}}</span>
     <ReadMore class="show-description" v-if="show.description.long" v-bind:text="show.description.long" />
   </div>
 </template>
@@ -37,14 +38,14 @@ export default {
   text-decoration: none;
   color: var(--brandPrimary);
 
-  &:hover {
-    text-decoration: underline;
-  }
-
   @media screen and (min-width: 44rem) {
     white-space: normal;
     font-size: .75rem;
   }
+}
+
+a.show-author:hover {
+  text-decoration: underline;
 }
 
 .show-description {

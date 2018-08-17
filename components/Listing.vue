@@ -5,7 +5,7 @@
     <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-if="links" v-bind:links="links" />
     <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-if="!links" />
     <Listen v-bind="{show}"/>
-    <Share v-bind:iTunesID="itunes.collectionId" v-bind:customLink="sharableLink"/>
+    <Share v-bind:iTunesID="itunes.collectionId" v-bind:title="show.title" v-bind:sharableLink="sharableLink"/>
     <Upsell v-if="!premium"/>
   </main>
 </template>
