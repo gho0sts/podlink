@@ -32,14 +32,10 @@ export default {
   text-transform: uppercase;
   line-height: 1.125;
   font-weight: 900;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-decoration: none;
   color: var(--brandPrimary);
 
   @media screen and (min-width: 44rem) {
-    white-space: normal;
     font-size: .75rem;
   }
 }

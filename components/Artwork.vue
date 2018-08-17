@@ -17,7 +17,7 @@ export default {
 .show-artwork {
   position: relative;
   width: 100%;
-  max-width: 16em;
+  max-width: 24em;
   margin: 0 auto;
 }
 
