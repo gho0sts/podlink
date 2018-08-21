@@ -119,7 +119,6 @@ export default {
     svg {
       fill: var(--brandPrimary);
     }
-
   }
 
   svg {

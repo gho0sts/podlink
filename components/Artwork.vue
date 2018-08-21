@@ -52,7 +52,7 @@ export default {
   display: block;
   border-radius: var(--borderradius);
   overflow: hidden;
-  background: #FFF;
+  background: var(--brandBgTint);
   fill: var(--brandBgTint);
   z-index: 0;
 }

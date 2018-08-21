@@ -21,8 +21,15 @@ export default {
     text-decoration: none;
     color: var(--brandDark);
 
-    &:hover {
-      box-shadow: 0 0.5em 1.5em -0.25em var(--brandMuted);
+    &:focus, &:hover {
+      outline: none;
+      transform: translateY(-4px);
+      box-shadow: 0 0.75em 1.5em -0.5em var(--brandMuted);
+      background-color: var(--resultHover);
+
+      svg {
+        fill: var(--brandPrimary);
+      }
     }
   }
 </style>

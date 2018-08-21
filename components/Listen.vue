@@ -106,13 +106,17 @@ export default {
     line-height: 1;
   }
 
-  .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true] {
+  .plyr--audio .plyr__control.plyr__tab-focus, 
+  .plyr--audio .plyr__control:hover, 
+  .plyr--audio .plyr__control[aria-expanded=true] {
     background: transparent;
     fill: var(--brandRecessed);
     transition: all .2s ease;
   }
 
-  .plyr--audio .plyr__control.plyr__tab-focus svg, .plyr--audio .plyr__control:hover svg, .plyr--audio .plyr__control[aria-expanded=true] svg {
+  .plyr--audio .plyr__control.plyr__tab-focus svg, 
+  .plyr--audio .plyr__control:hover svg, 
+  .plyr--audio .plyr__control[aria-expanded=true] svg {
     fill: var(--brandPrimary);
   }
 
