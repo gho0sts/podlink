@@ -18,7 +18,7 @@ export default {
   props: ['iTunesID','sharableLink','title'],
   computed: {
     facebookLink: function () { return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.sharableLink)},
-    twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20app%20of%20choice'}
+    twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20preferred%20podcast%20app'}
   },
   head () {
     return {
