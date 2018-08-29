@@ -4,6 +4,7 @@
     <a class="show-author" v-if="show.link" :href="show.link">{{show.author}}</a>
     <span class="show-author" v-if="!show.link" >{{show.author}}</span>
     <ReadMore class="show-description" v-if="show.description.long" v-bind:text="show.description.long" />
+    <a class="show-support" v-if="show.paymentLink" :href="show.paymentLink" target="_blank">Support this show</a>
   </div>
 </template>
 <script>
@@ -42,6 +43,25 @@ export default {
 
 a.show-author:hover {
   text-decoration: underline;
+}
+
+.show-support {
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  background: #1fb43d;
+  color: #ffffff;
+  padding: .25rem .5rem;
+  margin-top: .5rem;
+  border-radius: var(--borderradius);
+
+  &:hover {
+    background: #18882f;
+  }
+
+  @media screen and (min-width: 44rem) {
+    font-size: .75rem;
+  }
 }
 
 .show-description {
