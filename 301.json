@@ -35,5 +35,10 @@
     { "from": "/hallmarkbaptistchurch", "to": "/988947559" },
     { "from": "/artfunk", "to": "/975392563" },
     { "from": "/artfunkpodcast", "to": "/975392563" },
-    { "from": "/maxtractioninlondon", "to": "/1404018061" }
+    { "from": "/maxtractioninlondon", "to": "/1404018061" },
+    { "from": "/luisterdoc", "to": "/1298030347",
+        "links" : {
+            "stitcher" : "https://www.stitcher.com/podcast/peter-de-ruiter/luisterdoc"
+        }
+    }
 ]
