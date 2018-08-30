@@ -1,7 +1,7 @@
 <template>
   <div id="page" :style="cssProps">
     <NavBar/>
-    <Listing v-if="show" v-bind="{show,itunes,premium,sharableLink,links}"/>
+    <Episode v-if="show" v-bind="{show,itunes,premium,sharableLink,links}"/>
     <Error v-if="!show"/>
   </div>
 </template>
@@ -9,16 +9,13 @@
 import axios from 'axios'
 import stringify from 'json-stringify-safe'
 import NavBar from '~/components/NavBar.vue'
-import Listing from '~/components/Listing.vue'
+import Episode from '~/components/Episode.vue'
 import Error from '~/components/Error.vue'
 const redirects = require('~/301.json')
 
 export default {
   name: 'Podcast',
-  validate ({ params }) {
-    return /^\d+$/.test(params.podcast)
-  },   
-  components: { NavBar, Listing, Error },
+  components: { NavBar, Episode, Error },
   data () {
     return {
       redirects
@@ -100,7 +97,8 @@ export default {
       }
     }
 
-
+    let episodeHash = `${params.podcast.episode}`
+    let episodeURL = Buffer.from(episodeHash).toString('ascii')
 
     return {
       itunes: itunes.data.results[0],
