@@ -40,5 +40,16 @@
         "links" : {
             "stitcher" : "https://www.stitcher.com/podcast/peter-de-ruiter/luisterdoc"
         }
+    },
+    { "from": "/cointalk", "to": "/1332061471", 
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/1YtUs29XdZYHg8jUmubFA0",
+            "stitcher" : "https://www.stitcher.com/podcast/aaron-lammer-2/coin-talk"
+        } 
+    },
+    { "from": "/podcastprofessor", "to": "/1436850385",
+        "links" : {
+            "stitcher" : "https://www.stitcher.com/podcast/luisterdoc/podcastprofessor"
+        }
     }
 ]
