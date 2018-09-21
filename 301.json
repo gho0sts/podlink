@@ -51,5 +51,15 @@
         "links" : {
             "stitcher" : "https://www.stitcher.com/podcast/luisterdoc/podcastprofessor"
         }
+    },
+    { "from": "/grownups", "to": "/890900960",
+        "autoforward" : {
+            "ios" : "https://itunes.apple.com/podcast/id890900960?mt=2&at=10lR7u&ct=podlink",
+            "android" : "https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5ncm93bnVwc3JlYWR0aGluZ3N0aGV5d3JvdGVhc2tpZHMuY29tL3BvZGNhc3Q%3D"
+        },
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0tKu6eD6VDfxboZoWd0j6H",
+            "stitcher" : "https://www.stitcher.com/podcast/peter-de-ruiter/luisterdoc"
+        }
     }
 ]

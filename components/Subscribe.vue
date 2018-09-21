@@ -2,7 +2,7 @@
   <div class="show-subscribe">
     <h2 class="show-subhead">Subscribe</h2>
     <div class="show-buttons">
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://geo.itunes.apple.com/ca/podcast/feed/id${iTunesID}`"><img class="app-img" alt="iTunes" src="/images/podcatchers/icon-itunes.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://itunes.apple.com/podcast/id${iTunesID}?mt=2&ct=podlink`"><img class="app-img" alt="iTunes" src="/images/podcatchers/icon-itunes.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="googleLink"><img class="app-img" alt="Google Podcasts" src="/images/podcatchers/icon-googlepodcasts.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="`${links.spotify}`" v-if="links && links.spotify"><img class="app-img" alt="Spotify" src="/images/podcatchers/icon-spotify.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="`https://overcast.fm/itunes${iTunesID}`"><img class="app-img" alt="Overcast" src="/images/podcatchers/icon-overcast.svg" /></a>
