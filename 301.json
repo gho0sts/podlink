@@ -51,5 +51,11 @@
         "links" : {
             "stitcher" : "https://www.stitcher.com/podcast/luisterdoc/podcastprofessor"
         }
+    },
+    { "from": "/awwypodcast", "to": "/1359317868",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0xEaboLJZS9YfieO6GcLAj?si=JUNhagjBR_uweLR8Og3urQ",
+            "stitcher" : "https://www.stitcher.com/s?fid=177050"
+        }
     }
 ]
