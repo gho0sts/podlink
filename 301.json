@@ -57,5 +57,6 @@
             "spotify" : "https://open.spotify.com/show/0xEaboLJZS9YfieO6GcLAj?si=JUNhagjBR_uweLR8Og3urQ",
             "stitcher" : "https://www.stitcher.com/s?fid=177050"
         }
-    }
+    },
+    { "from": "/upgradepodcast", "to": "/1438607542" }
 ]
