@@ -59,5 +59,10 @@
         }
     },
     { "from": "/upgradepodcast", "to": "/1438607542" },
-    { "from": "/probablytrue", "to": "/1179573706" }
+    { "from": "/probablytrue", "to": "/1179573706",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/6wT6l8q1MGlfYsTRRzdT4K",
+            "stitcher" : "https://www.stitcher.com/podcast/are-you-sitting-comfortably-2/probably-true-podcast"
+        } 
+    }
 ]
