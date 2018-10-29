@@ -58,5 +58,6 @@
             "stitcher" : "https://www.stitcher.com/s?fid=177050"
         }
     },
-    { "from": "/upgradepodcast", "to": "/1438607542" }
+    { "from": "/upgradepodcast", "to": "/1438607542" },
+    { "from": "/probablytrue", "to": "/1179573706" }
 ]
