@@ -64,5 +64,11 @@
             "spotify" : "https://open.spotify.com/show/6wT6l8q1MGlfYsTRRzdT4K",
             "stitcher" : "https://www.stitcher.com/podcast/are-you-sitting-comfortably-2/probably-true-podcast"
         } 
+    },
+    { "from": "/soundofmind", "to": "/1438704879",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0LREBIeuUTClwRdrOV4UJc?si=Huj9c5XgSqKQ7K6h27xS3g",
+            "stitcher" : "https://www.stitcher.com/podcast/sound-of-mind?refid=stpr"
+        } 
     }
 ]
