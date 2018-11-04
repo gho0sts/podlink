@@ -52,6 +52,25 @@
             "stitcher" : "https://www.stitcher.com/podcast/luisterdoc/podcastprofessor"
         }
     },
+    { "from": "/awwypodcast", "to": "/1359317868",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0xEaboLJZS9YfieO6GcLAj?si=JUNhagjBR_uweLR8Og3urQ",
+            "stitcher" : "https://www.stitcher.com/s?fid=177050"
+        }
+    },
+    { "from": "/upgradepodcast", "to": "/1438607542" },
+    { "from": "/probablytrue", "to": "/1179573706",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/6wT6l8q1MGlfYsTRRzdT4K",
+            "stitcher" : "https://www.stitcher.com/podcast/are-you-sitting-comfortably-2/probably-true-podcast"
+        } 
+    },
+    { "from": "/soundofmind", "to": "/1438704879",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0LREBIeuUTClwRdrOV4UJc?si=Huj9c5XgSqKQ7K6h27xS3g",
+            "stitcher" : "https://www.stitcher.com/podcast/sound-of-mind?refid=stpr"
+        } 
+    },
     { "from": "/grownups", "to": "/890900960",
         "autoforward" : {
             "ios" : "https://itunes.apple.com/podcast/id890900960?mt=2&at=10lR7u&ct=podlink",
