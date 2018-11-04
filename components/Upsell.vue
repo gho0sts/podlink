@@ -1,6 +1,6 @@
 <template>
   <a class="show-upsell" href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url">
-      <a href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url">Claim a personalized URL</a> to make this page even easier to share with your&nbsp;listeners. 
+      <span class="highlight">Claim a personalized URL</span> to make this page even easier to share with your&nbsp;listeners. 
   </a>
 </template>
 <script>
@@ -31,5 +31,10 @@ export default {
         fill: var(--brandPrimary);
       }
     }
+  }
+
+  .highlight {
+    color: var(--brandPrimary);
+    text-decoration: underline;
   }
 </style>
