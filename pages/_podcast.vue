@@ -21,7 +21,9 @@ export default {
   components: { NavBar, Listing, Error },
   data () {
     return {
-      redirects
+      redirects,
+      premium : false,
+      links : {}
     }
   },
   head () {
