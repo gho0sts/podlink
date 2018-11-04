@@ -111,7 +111,8 @@ module.exports = {
     ['@nuxtjs/google-tag-manager', { id: 'GTM-WBRSGC7' }],
   ],
   plugins: [
-    { src: '~/plugins/vue-plyr', ssr: false }
+    { src: '~/plugins/vue-plyr', ssr: false },
+    { src: '~/plugins/stripHTML' }
   ],
   axios: {
     credentials: false

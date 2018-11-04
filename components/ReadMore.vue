@@ -1,7 +1,7 @@
 <template>
   <div id="readmore">
     <p>
-      {{ displayText }}
+      {{ displayText | striphtml }}
       <button @click="toggle" v-if="long">Read {{ toggled ? 'less' : 'more' }}</button>   
     </p>
   </div>
