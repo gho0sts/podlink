@@ -6,7 +6,15 @@
 <script>
 
 export default {
-  name: 'Upsell'
+  name: 'Upsell',
+  head () {
+    return {
+      script: [
+        { src: 'https://plasso.com/embed/storefront.1.0.js' },
+        { src: '/js/plasso.init.js' }
+      ]
+    } 
+  },
 }
 </script>
 
