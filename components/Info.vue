@@ -4,7 +4,6 @@
     <a class="show-author" v-if="show.link" :href="show.link">{{show.author}}</a>
     <span class="show-author" v-if="!show.link" >{{show.author}}</span>
     <ReadMore class="show-description" v-if="show.description.long" v-bind:text="show.description.long" />
-    <a class="show-support" v-if="show.paymentLink" :href="show.paymentLink" target="_blank">Support this show</a>
   </div>
 </template>
 <script>
