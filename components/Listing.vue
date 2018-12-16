@@ -2,8 +2,7 @@
   <main class="show">
     <Artwork class="show-media" v-bind="{itunes}"/>
     <Info class="show-info" v-bind="{show}"/>
-    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-if="links" v-bind:links="links" />
-    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-if="!links" />
+    <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-bind:links="links" />
     <Listen v-bind="{show}"/>
     <Share v-bind:iTunesID="itunes.collectionId" v-bind:title="show.title" v-bind:sharableLink="sharableLink"/>
     <Upsell v-if="!premium"/>

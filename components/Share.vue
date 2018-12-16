@@ -20,15 +20,6 @@ export default {
     facebookLink: function () { return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.sharableLink)},
     twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20preferred%20podcast%20app'}
   },
-  head () {
-    return {
-      script: [
-        { src: 'https://plasso.com/embed/storefront.1.0.js' },
-        { src: '/js/plasso.init.js' },
-        { src: '/js/drift.init.js' }
-      ]
-    } 
-  },
   methods: {
     selectText: function (event) {
       window.getSelection().selectAllChildren( document.getElementById('share') );

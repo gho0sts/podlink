@@ -71,6 +71,12 @@
             "stitcher" : "https://www.stitcher.com/podcast/sound-of-mind?refid=stpr"
         } 
     },
+    { "from": "/richardparks", "to": "/1444732438",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/1jYgW0HoA5WMLJhXhYqGax",
+            "stitcher" : "https://www.stitcher.com/podcast/bengo-media/richard-parks-antarctica?refid=podlink"
+        } 
+    },
     { "from": "/grownups", "to": "/890900960",
         "autoforward" : {
             "ios" : "https://itunes.apple.com/podcast/id890900960?mt=2&at=10lR7u&ct=podlink",
