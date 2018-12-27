@@ -101,9 +101,6 @@ export default {
         links = result.links
       }
     }
-
-
-
     return {
       itunes: itunes.data.results[0],
       show: podlinkservices.data,

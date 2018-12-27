@@ -2,6 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+ env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  }
   head: {
     htmlAttrs: {
       lang: 'en',
@@ -9,8 +12,11 @@ module.exports = {
     title: 'PodLink',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-      { 
+      {
+        name: 'viewport', 
+        content: 'width=device-width, initial-scale=1, viewport-fit=cover'
+      },
+      {
         hid: 'description', 
         name: 'description', 
         content: 'The easiest way to share podcasts'
@@ -60,10 +66,12 @@ module.exports = {
         content: '/apple-touch-icon.png'
       },
 		  { 
-        name: 'twitter:site', content: '@_podlink'
+        name: 'twitter:site', 
+        content: '@_podlink'
       },
 		  { 
-        name: 'twitter:creator', content: '@_podlink'
+        name: 'twitter:creator', 
+        content: '@_podlink'
       }
     ],
     link: [
@@ -112,6 +120,7 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/vue-plyr', ssr: false },
+    { src: '~/plugins/tooltip', ssr: false },
     { src: '~/plugins/stripHTML' }
   ],
   axios: {

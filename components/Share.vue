@@ -4,21 +4,24 @@
       <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="sharableLink" >{{sharableLink}}</div>
       <button class="action-copy" type="button" v-clipboard:copy="sharableLink">Copy</button>
     </div>
-    <a class="social-share" target="_blank" :href="facebookLink"><IconFacebook /></a>
-    <a class="social-share" target="_blank" :href="twitterLink"><IconTwitter /></a>
+    <a class="social-share" target="_blank" v-tooltip="'Facebook'" alt="Facebook" :href="facebookLink"><IconFacebook /></a>
+    <a class="social-share" target="_blank" v-tooltip="'Twitter'" alt="Twitter" :href="twitterLink"><IconTwitter /></a>
+    <button class="social-share" type="button" v-tooltip="'Embed'" alt="Embed" v-clipboard:copy="embedCode"><IconCode /></button>
   </div>
 </template>
 <script>
 import IconFacebook from '~/components/IconFacebook.vue'
 import IconTwitter from '~/components/IconTwitter.vue'
+import IconCode from '~/components/IconCode.vue'
 
 export default {
   name: 'Share',
-  components: { IconFacebook, IconTwitter },
+  components: { IconFacebook, IconTwitter, IconCode },
   props: ['iTunesID','sharableLink','title'],
   computed: {
     facebookLink: function () { return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.sharableLink)},
-    twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20preferred%20podcast%20app'}
+    twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20preferred%20podcast%20app'},
+    embedCode: function () { return '<iframe width="100%" height="113" src="http://pod.link/' + this.iTunesID + '/embed" frameborder="0"></iframe>' }
   },
   methods: {
     selectText: function (event) {
@@ -36,7 +39,7 @@ export default {
 .show-share {
   display: grid;
   grid-gap: .75rem;
-  grid-template-columns: 1fr 2rem 2rem;
+  grid-template-columns: 1fr 2rem 2rem 2rem;
 }
 
 .share-bar {
@@ -94,12 +97,16 @@ export default {
   }
 }
 
-.social-share:link, .social-share:visited {
+.social-share, .social-share:link, .social-share:visited {
+  -webkit-appearance: none;
   background: var(--brandBgTint);
   color: var(--brandRecessed);
   border-radius: var(--borderradius);
+  border: none;
   width: 2rem;
   height: 2rem;
+  padding: 0;
+  cursor: pointer;
 
   &:focus, &:hover {
     outline: none;
