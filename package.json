@@ -4,6 +4,9 @@
   "description": "The easiest way to share podcasts",
   "author": "Nathan Gathright <nathan.gathright@gmail.com>",
   "private": true,
+  "engines": {
+    "node": "10.12.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
