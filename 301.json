@@ -71,5 +71,11 @@
             "spotify" : "https://open.spotify.com/show/1jYgW0HoA5WMLJhXhYqGax",
             "stitcher" : "https://www.stitcher.com/podcast/bengo-media/richard-parks-antarctica?refid=podlink"
         } 
+    },
+    { "from": "/greatpeopleshow", "to": "/1243886463",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/6NoLaWIY9cH3rhMmwAJGQF?si=ZjzuLNzgRkWP_-kjgAPrNg",
+            "stitcher" : "https://www.stitcher.com/podcast/great-people-show?refid=podlink"
+        } 
     }
 ]
