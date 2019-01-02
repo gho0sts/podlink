@@ -77,5 +77,11 @@
             "spotify" : "https://open.spotify.com/show/6NoLaWIY9cH3rhMmwAJGQF?si=ZjzuLNzgRkWP_-kjgAPrNg",
             "stitcher" : "https://www.stitcher.com/podcast/great-people-show?refid=podlink"
         } 
+    },
+    { "from": "/7mm", "to": "/1223819466",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/7egOZDgRIBXsHKpJwfgMmd?si=azxSQ0XyT8mRertAS_eKDA",
+            "stitcher" : "https://www.stitcher.com/podcast/mark-asquith/the-7-minute-mentor-with-mark-asquith?refid=podlink"
+        } 
     }
 ]
