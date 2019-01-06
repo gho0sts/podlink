@@ -83,5 +83,10 @@
             "spotify" : "https://open.spotify.com/show/7egOZDgRIBXsHKpJwfgMmd?si=azxSQ0XyT8mRertAS_eKDA",
             "stitcher" : "https://www.stitcher.com/podcast/mark-asquith/the-7-minute-mentor-with-mark-asquith?refid=podlink"
         } 
+    },
+    { "from": "/theinsidesource", "to": "/1273754805",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/6bHDwhMOOedoKZjj83JJ49"
+        } 
     }
 ]
