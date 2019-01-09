@@ -108,7 +108,6 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    'redirect-ssl',
     '~/servermiddleware/seo.js'
   ],
   modules: [
