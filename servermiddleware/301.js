@@ -1,4 +1,4 @@
-const redirects = require('../301.json')
+const redirects = require('../redirects.json')
 
 module.exports = function (req, res, next) {
   const url = req.url

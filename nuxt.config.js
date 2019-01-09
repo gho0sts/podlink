@@ -108,7 +108,7 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    '~/servermiddleware/seo.js'
+    '~/servermiddleware/301.js'
   ],
   modules: [
     '@nuxtjs/axios',

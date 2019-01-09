@@ -11,7 +11,7 @@ import stringify from 'json-stringify-safe'
 import NavBar from '~/components/NavBar.vue'
 import Listing from '~/components/Listing.vue'
 import Error from '~/components/Error.vue'
-const redirects = require('~/301.json')
+const redirects = require('~/redirects.json')
 
 export default {
   name: 'Podcast',

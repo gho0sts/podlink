@@ -29,7 +29,7 @@ import axios from 'axios'
 import IconLogo from '~/components/IconLogo.vue'
 import Artwork from '~/components/Artwork.vue'
 import Subscribe from '~/components/Subscribe.vue'
-const redirects = require('~/301.json')
+const redirects = require('~/redirects.json')
 
 export default {
   name: 'EmbeddedPage',
