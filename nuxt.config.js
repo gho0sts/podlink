@@ -108,6 +108,7 @@ module.exports = {
     }
   },
   serverMiddleware: [
+    'redirect-ssl',
     '~/servermiddleware/301.js'
   ],
   modules: [
