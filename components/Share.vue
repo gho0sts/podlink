@@ -2,11 +2,11 @@
   <div class="show-share">
     <div class="share-bar">
       <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="sharableLink" >{{sharableLink}}</div>
-      <button class="action-copy" type="button" v-clipboard:copy="sharableLink">Copy</button>
+      <button class="action-copy" v-tooltip="'Copy URL to Clipboard'" type="button" v-clipboard:copy="sharableLink">Copy</button>
     </div>
     <a class="social-share" target="_blank" v-tooltip="'Facebook'" alt="Facebook" :href="facebookLink"><IconFacebook /></a>
     <a class="social-share" target="_blank" v-tooltip="'Twitter'" alt="Twitter" :href="twitterLink"><IconTwitter /></a>
-    <button class="social-share" type="button" v-tooltip="'Embed'" alt="Embed" v-clipboard:copy="embedCode"><IconCode /></button>
+    <button class="social-share" type="button" v-tooltip="'Copy Embed Code'" alt="Embed" v-clipboard:copy="embedCode"><IconCode /></button>
   </div>
 </template>
 <script>
