@@ -1,26 +1,32 @@
 <template>
-  <a class="show-upsell" href="https://plasso.com/s/TbHgLTRPAY/plan/custom_url">
+  <div class="show-upsell">
+    <a href="javascript:void(0)" id="checkout-button" data-cb-type="checkout" data-cb-plan-id="premium-annual" data-cb-ga-enabled="true">
       <span class="highlight">Claim a personalized URL</span> to make this page even easier to share with your&nbsp;listeners. 
-  </a>
+    </a>
+  </div>
 </template>
 <script>
-
 export default {
   name: 'Upsell',
   head () {
     return {
       script: [
-        { src: 'https://plasso.com/embed/storefront.1.0.js' },
-        { src: '/js/plasso.init.js' }
+        {
+          src: 'https://js.chargebee.com/v2/chargebee.js',
+          'data-cb-site' : 'podlink'
+        }
       ]
     } 
-  },
+  }
 }
 </script>
 
 <style scoped lang="scss">
 
-  .show-upsell {
+  #checkout-button {
+    display: block;
+    width: 100%;
+    border: none;
     border-radius: var(--borderradius);
     box-shadow: 0 0.5em 1.5em -0.5em var(--brandMuted);
     background: #FFF;
@@ -28,16 +34,13 @@ export default {
     font-size: 14px;
     text-decoration: none;
     color: var(--brandDark);
+    cursor: pointer;
 
     &:focus, &:hover {
       outline: none;
       transform: translateY(-4px);
       box-shadow: 0 0.75em 1.5em -0.5em var(--brandMuted);
       background-color: var(--resultHover);
-
-      svg {
-        fill: var(--brandPrimary);
-      }
     }
   }
 
