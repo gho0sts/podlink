@@ -89,6 +89,18 @@
             "spotify" : "https://open.spotify.com/show/6bHDwhMOOedoKZjj83JJ49"
         } 
     },
-    { "from": "/earthtolinda", "to": "/1404198284"
+    { "from": "/earthtolinda", "to": "/1294442001"
+    },
+    { "from": "/content10x", "to": "/1223819466",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0OacyZbekjZQwhdXI8QgvF",
+            "stitcher" : "https://www.stitcher.com/podcast/content-10x/the-content-10x-podcast?refid=podlink"
+        } 
+    },
+    { "from": "/podcastclub", "to": "/1409377657",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/0N7hWudwe7YG1jxJn6lnG3?si=Mlm_zgjfRASvr2zEKwYz5Q",
+            "stitcher" : "http://www.stitcher.com/s?fid=205711&refid=podlink"
+        } 
     }
 ]
