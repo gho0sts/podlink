@@ -1,8 +1,8 @@
 <template>
   <div class="show-share">
-    <div class="share-bar">
-      <div id="share" v-on:mouseover="selectText" v-on:mouseleave="deselectText" v-clipboard:copy="sharableLink" >{{sharableLink}}</div>
-      <button class="action-copy" v-tooltip="'Copy URL to Clipboard'" type="button" v-clipboard:copy="sharableLink">Copy</button>
+    <div class="share-bar" v-tooltip="'Copy URL to Clipboard'" v-clipboard:copy="sharableLink" >
+      <div id="share" >{{sharableLink}}</div>
+      <button class="action-copy" type="button">Copy</button>
     </div>
     <a class="social-share" target="_blank" v-tooltip="'Facebook'" alt="Facebook" :href="facebookLink"><IconFacebook /></a>
     <a class="social-share" target="_blank" v-tooltip="'Twitter'" alt="Twitter" :href="twitterLink"><IconTwitter /></a>
@@ -22,14 +22,6 @@ export default {
     facebookLink: function () { return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.sharableLink)},
     twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20preferred%20podcast%20app'},
     embedCode: function () { return '<iframe width="100%" height="113" src="http://pod.link/' + this.iTunesID + '/embed" frameborder="0"></iframe>' }
-  },
-  methods: {
-    selectText: function (event) {
-      window.getSelection().selectAllChildren( document.getElementById('share') );
-    },
-    deselectText: function (event) {
-      window.getSelection().removeAllRanges();
-    },
   }
 }
 </script>
@@ -48,6 +40,7 @@ export default {
   border-radius: var(--borderradius);
   padding: 0 .5rem;
   height: 2rem;
+  cursor: pointer;
 
   &:focus, &:hover {
     outline: none;
