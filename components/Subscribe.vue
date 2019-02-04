@@ -23,8 +23,15 @@ export default {
   props: ['iTunesID','feedUrl', 'links'],
   computed: {
     googleLink: function () { return 'https://www.google.com/podcasts?feed=' + Buffer.from(this.feedUrl).toString('base64')},
-    breakerLink: function () { return 'https://www.breaker.audio/shows?feed_url=' + encodeURIComponent(this.feedUrl)},
     radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.feedUrl)},
+    breakerLink: function () { 
+      if (this.links.breaker){
+        return this.links.breaker;
+      }
+      else {
+        return 'https://www.breaker.audio/shows?feed_url=' + encodeURIComponent(this.feedUrl)
+      }
+    },
   }
 }
 </script>

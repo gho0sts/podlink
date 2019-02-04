@@ -63,7 +63,8 @@
     { "from": "/soundofmind", "to": "/1438704879",
         "links" : {
             "spotify" : "https://open.spotify.com/show/0LREBIeuUTClwRdrOV4UJc?si=Huj9c5XgSqKQ7K6h27xS3g",
-            "stitcher" : "https://www.stitcher.com/podcast/sound-of-mind?refid=stpr"
+            "stitcher" : "https://www.stitcher.com/podcast/sound-of-mind?refid=stpr",
+            "breaker" : "https://www.breaker.audio/sound-of-mind"
         } 
     },
     { "from": "/richardparks", "to": "/1444732438",

@@ -112,8 +112,15 @@ export default {
   computed: {
     cssProps() { 
       if(this.links) {
-        return {
-          '--apps': Number(Object.keys(this.links).length) + 9,
+        if(this.links.breaker) {
+          return {
+            '--apps': Number(Object.keys(this.links).length) + 8,
+          }
+        }
+        else {
+          return {
+            '--apps': Number(Object.keys(this.links).length) + 9,
+          }
         }
       }
       else {
