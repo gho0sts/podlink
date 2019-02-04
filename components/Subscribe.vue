@@ -5,7 +5,7 @@
       <a class="show-link" target="_blank" rel="noopener" :href="`https://itunes.apple.com/podcast/id${iTunesID}?mt=2&ct=podlink`" v-tooltip="`Apple Podcasts`"><img class="app-img" alt="Apple Podcasts" src="/images/podcatchers/icon-itunes.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="googleLink" v-tooltip="`Google`"><img class="app-img" alt="Google Podcasts" src="/images/podcatchers/icon-googlepodcasts.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="`${links.spotify}`" v-if="links && links.spotify" v-tooltip="`Spotify`"><img class="app-img" alt="Spotify" src="/images/podcatchers/icon-spotify.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://overcast.fm/itunes${iTunesID}`" v-tooltip="`Overcast`"><img class="app-img" alt="Overcast" src="/images/podcatchers/icon-overcast.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://overcast.fm/itunes${iTunesID}/`" v-tooltip="`Overcast`"><img class="app-img" alt="Overcast" src="/images/podcatchers/icon-overcast.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="`https://castbox.fm/vic/${iTunesID}`" v-tooltip="`Castbox`"><img class="app-img" alt="Castbox" src="/images/podcatchers/icon-castbox.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="`${links.stitcher}`" v-if="links && links.stitcher" v-tooltip="`Stitcher`"><img class="app-img" alt="Stitcher" src="/images/podcatchers/icon-stitcher.svg" /></a>
       <a class="show-link" target="_blank" rel="noopener" :href="`https://pca.st/itunes/${iTunesID}`" v-tooltip="`Pocket`"><img class="app-img" alt="Pocket Casts" src="/images/podcatchers/icon-pocketcasts.svg" /></a>
