@@ -103,5 +103,11 @@
             "spotify" : "https://open.spotify.com/show/0N7hWudwe7YG1jxJn6lnG3?si=Mlm_zgjfRASvr2zEKwYz5Q",
             "stitcher" : "http://www.stitcher.com/s?fid=205711&refid=podlink"
         } 
+    },
+    { "from": "/winmipodcast", "to": "/1330237490",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/71klh9MD7Jrhu3J01EU0XP",
+            "stitcher" : "https://www.stitcher.com/podcast/why-ill-never-make-it&refid=podlink"
+        } 
     }
 ]
