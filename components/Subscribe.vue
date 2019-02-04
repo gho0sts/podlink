@@ -25,7 +25,7 @@ export default {
     googleLink: function () { return 'https://www.google.com/podcasts?feed=' + Buffer.from(this.feedUrl).toString('base64')},
     radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.feedUrl)},
     breakerLink: function () { 
-      if (this.links.breaker){
+      if (this.links && this.links.breaker ){
         return this.links.breaker;
       }
       else {
