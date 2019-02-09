@@ -4,8 +4,8 @@
       <div id="share" >{{sharableLink}}</div>
       <button class="action-copy" type="button">Copy</button>
     </div>
-    <a class="social-share" target="_blank" v-tooltip="'Facebook'" alt="Facebook" :href="facebookLink"><IconFacebook /></a>
-    <a class="social-share" target="_blank" v-tooltip="'Twitter'" alt="Twitter" :href="twitterLink"><IconTwitter /></a>
+    <a class="social-share" target="_blank" v-tooltip="'Facebook'" alt="Facebook" data-ga-action="Facebook" data-ga-category="Social Share" :href="facebookLink"><IconFacebook /></a>
+    <a class="social-share" target="_blank" v-tooltip="'Twitter'" alt="Twitter" data-ga-action="Twitter" data-ga-category="Social Share" :href="twitterLink"><IconTwitter /></a>
     <button class="social-share" type="button" v-tooltip="'Copy Embed Code'" alt="Embed" v-clipboard:copy="embedCode"><IconCode /></button>
   </div>
 </template>

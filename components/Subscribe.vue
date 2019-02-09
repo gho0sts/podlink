@@ -2,17 +2,17 @@
   <div class="show-subscribe">
     <h2 class="show-subhead">Subscribe</h2>
     <div class="show-buttons">
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://itunes.apple.com/podcast/id${iTunesID}?mt=2&ct=podlink`" v-tooltip="`Apple Podcasts`"><img class="app-img" alt="Apple Podcasts" src="/images/podcatchers/icon-itunes.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="googleLink" v-tooltip="`Google`"><img class="app-img" alt="Google Podcasts" src="/images/podcatchers/icon-googlepodcasts.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`${links.spotify}`" v-if="links && links.spotify" v-tooltip="`Spotify`"><img class="app-img" alt="Spotify" src="/images/podcatchers/icon-spotify.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://overcast.fm/itunes${iTunesID}/`" v-tooltip="`Overcast`"><img class="app-img" alt="Overcast" src="/images/podcatchers/icon-overcast.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://castbox.fm/vic/${iTunesID}`" v-tooltip="`Castbox`"><img class="app-img" alt="Castbox" src="/images/podcatchers/icon-castbox.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`${links.stitcher}`" v-if="links && links.stitcher" v-tooltip="`Stitcher`"><img class="app-img" alt="Stitcher" src="/images/podcatchers/icon-stitcher.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://pca.st/itunes/${iTunesID}`" v-tooltip="`Pocket`"><img class="app-img" alt="Pocket Casts" src="/images/podcatchers/icon-pocketcasts.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`https://castro.fm/itunes/${iTunesID}`" v-tooltip="`Castro`"><img class="app-img" alt="Castro" src="/images/podcatchers/icon-castro.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="radiopublicLink" v-tooltip="`RadioPublic`"><img class="app-img" alt="RadioPublic" src="/images/podcatchers/icon-radiopublic.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="breakerLink" v-tooltip="`Breaker`"><img class="app-img" alt="Breaker" src="/images/podcatchers/icon-breaker.svg" /></a>
-      <a class="show-link" target="_blank" rel="noopener" :href="`${this.feedUrl}`" v-tooltip="`RSS`"><img class="app-img" alt="RSS" src="/images/podcatchers/icon-rss.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://itunes.apple.com/podcast/id${iTunesID}?mt=2&ct=podlink`" data-ga-category="App Subscribe" data-ga-label="Apple" v-tooltip="`Apple Podcasts`"><img class="app-img" alt="Apple Podcasts" src="/images/podcatchers/icon-itunes.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="googleLink" data-ga-category="App Subscribe" data-ga-label="Google Podcasts" v-tooltip="`Google Podcasts`"><img class="app-img" alt="Google Podcasts" src="/images/podcatchers/icon-googlepodcasts.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`${links.spotify}`" v-if="links && links.spotify" data-ga-category="App Subscribe" data-ga-label="Spotify" v-tooltip="`Spotify`"><img class="app-img" alt="Spotify" src="/images/podcatchers/icon-spotify.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://overcast.fm/itunes${iTunesID}/`" data-ga-category="App Subscribe" data-ga-label="Overcast" v-tooltip="`Overcast`"><img class="app-img" alt="Overcast" src="/images/podcatchers/icon-overcast.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://castbox.fm/vic/${iTunesID}`" data-ga-category="App Subscribe" data-ga-label="Castbox" v-tooltip="`Castbox`"><img class="app-img" alt="Castbox" src="/images/podcatchers/icon-castbox.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`${links.stitcher}`" v-if="links && links.stitcher" data-ga-category="App Subscribe" data-ga-label="Stitcher" v-tooltip="`Stitcher`"><img class="app-img" alt="Stitcher" src="/images/podcatchers/icon-stitcher.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://pca.st/itunes/${iTunesID}`" data-ga-category="App Subscribe" data-ga-label="Pocket" v-tooltip="`Pocket`"><img class="app-img" alt="Pocket Casts" src="/images/podcatchers/icon-pocketcasts.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`https://castro.fm/itunes/${iTunesID}`" data-ga-category="App Subscribe" data-ga-label="Castro" v-tooltip="`Castro`"><img class="app-img" alt="Castro" src="/images/podcatchers/icon-castro.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="radiopublicLink" data-ga-category="App Subscribe" data-ga-label="RadioPublic" v-tooltip="`RadioPublic`"><img class="app-img" alt="RadioPublic" src="/images/podcatchers/icon-radiopublic.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="breakerLink" data-ga-category="App Subscribe" data-ga-label="Breaker" v-tooltip="`Breaker`"><img class="app-img" alt="Breaker" src="/images/podcatchers/icon-breaker.svg" /></a>
+      <a class="show-link" target="_blank" rel="noopener" :href="`${this.feedUrl}`" data-ga-category="App Subscribe" data-ga-label="RSS" v-tooltip="`RSS`"><img class="app-img" alt="RSS" src="/images/podcatchers/icon-rss.svg" /></a>
     </div>
   </div>
 </template>
