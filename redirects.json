@@ -109,5 +109,11 @@
             "spotify" : "https://open.spotify.com/show/71klh9MD7Jrhu3J01EU0XP",
             "stitcher" : "https://www.stitcher.com/podcast/why-ill-never-make-it&refid=podlink"
         } 
+    },
+    { "from": "/whatifpod", "to": "/1192898753",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/50Ga7ol5uqC7aRajWuBgup?si=VLYCmhuFTnmdXQi1s0YpUw",
+            "stitcher" : "https://www.stitcher.com/podcast/the-what-if-podcast-2/the-what-if-podcast&refid=podlink"
+        } 
     }
 ]
