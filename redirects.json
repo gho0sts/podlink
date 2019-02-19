@@ -115,5 +115,11 @@
             "spotify" : "https://open.spotify.com/show/50Ga7ol5uqC7aRajWuBgup?si=VLYCmhuFTnmdXQi1s0YpUw",
             "stitcher" : "https://www.stitcher.com/podcast/the-what-if-podcast-2/the-what-if-podcast&refid=podlink"
         } 
+    },
+    { "from": "/bioalchemy", "to": "/1451896717",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/4xElFHDU2YD6HHmveIO4NI?si=LB85XmEcR-C3j37TuaNYEw",
+            "stitcher" : "https://www.stitcher.com/podcast/bio-alchemy&refid=podlink"
+        } 
     }
 ]
