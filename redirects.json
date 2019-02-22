@@ -25,7 +25,7 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/2BAHDwzmLkYk6T2wwW4IN4?si=ickqAoUUTeaw2g02FucaXg",
             "stitcher" : "https://www.stitcher.com/podcast/substack/the-substack-podcast"
-        } 
+        }
     },
     { "from": "/hallmarkbaptistchurch", "to": "/988947559" },
     { "from": "/artfunk", "to": "/975392563" },
@@ -40,7 +40,7 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/1YtUs29XdZYHg8jUmubFA0",
             "stitcher" : "https://www.stitcher.com/podcast/aaron-lammer-2/coin-talk"
-        } 
+        }
     },
     { "from": "/podcastprofessor", "to": "/1436850385",
         "links" : {
@@ -58,37 +58,37 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/6wT6l8q1MGlfYsTRRzdT4K",
             "stitcher" : "https://www.stitcher.com/podcast/are-you-sitting-comfortably-2/probably-true-podcast"
-        } 
+        }
     },
     { "from": "/soundofmind", "to": "/1438704879",
         "links" : {
             "spotify" : "https://open.spotify.com/show/0LREBIeuUTClwRdrOV4UJc?si=Huj9c5XgSqKQ7K6h27xS3g",
             "stitcher" : "https://www.stitcher.com/podcast/sound-of-mind?refid=stpr",
             "breaker" : "https://www.breaker.audio/sound-of-mind"
-        } 
+        }
     },
     { "from": "/richardparks", "to": "/1444732438",
         "links" : {
             "spotify" : "https://open.spotify.com/show/1jYgW0HoA5WMLJhXhYqGax",
             "stitcher" : "https://www.stitcher.com/podcast/bengo-media/richard-parks-antarctica?refid=podlink"
-        } 
+        }
     },
     { "from": "/greatpeopleshow", "to": "/1243886463",
         "links" : {
             "spotify" : "https://open.spotify.com/show/6NoLaWIY9cH3rhMmwAJGQF?si=ZjzuLNzgRkWP_-kjgAPrNg",
             "stitcher" : "https://www.stitcher.com/podcast/great-people-show?refid=podlink"
-        } 
+        }
     },
     { "from": "/7mm", "to": "/1223819466",
         "links" : {
             "spotify" : "https://open.spotify.com/show/7egOZDgRIBXsHKpJwfgMmd?si=azxSQ0XyT8mRertAS_eKDA",
             "stitcher" : "https://www.stitcher.com/podcast/mark-asquith/the-7-minute-mentor-with-mark-asquith?refid=podlink"
-        } 
+        }
     },
     { "from": "/theinsidesource", "to": "/1273754805",
         "links" : {
             "spotify" : "https://open.spotify.com/show/6bHDwhMOOedoKZjj83JJ49"
-        } 
+        }
     },
     { "from": "/earthtolinda", "to": "/1404198284"
     },
@@ -96,30 +96,36 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/0OacyZbekjZQwhdXI8QgvF",
             "stitcher" : "https://www.stitcher.com/podcast/content-10x/the-content-10x-podcast?refid=podlink"
-        } 
+        }
     },
     { "from": "/podcastclub", "to": "/1409377657",
         "links" : {
             "spotify" : "https://open.spotify.com/show/0N7hWudwe7YG1jxJn6lnG3?si=Mlm_zgjfRASvr2zEKwYz5Q",
             "stitcher" : "http://www.stitcher.com/s?fid=205711&refid=podlink"
-        } 
+        }
     },
     { "from": "/winmipodcast", "to": "/1330237490",
         "links" : {
             "spotify" : "https://open.spotify.com/show/71klh9MD7Jrhu3J01EU0XP",
             "stitcher" : "https://www.stitcher.com/podcast/why-ill-never-make-it&refid=podlink"
-        } 
+        }
     },
     { "from": "/whatifpod", "to": "/1192898753",
         "links" : {
             "spotify" : "https://open.spotify.com/show/50Ga7ol5uqC7aRajWuBgup?si=VLYCmhuFTnmdXQi1s0YpUw",
             "stitcher" : "https://www.stitcher.com/podcast/the-what-if-podcast-2/the-what-if-podcast&refid=podlink"
-        } 
+        }
     },
     { "from": "/bioalchemy", "to": "/1451896717",
         "links" : {
             "spotify" : "https://open.spotify.com/show/4xElFHDU2YD6HHmveIO4NI?si=LB85XmEcR-C3j37TuaNYEw",
             "stitcher" : "https://www.stitcher.com/podcast/bio-alchemy&refid=podlink"
-        } 
+        }
+    },
+    { "from": "/toyswereuspodcast", "to": "/1440006266",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/13gxkPj4wefYU9goAjHp2L?si=2fgPwHMdSn6pLEjEitJ6Xg",
+            "stitcher" : "https://www.stitcher.com/podcast/toys-were-us&refid=podlink"
+        }
     }
 ]
