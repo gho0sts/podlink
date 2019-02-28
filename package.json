@@ -17,7 +17,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/google-tag-manager": "^2.0.0",
     "@nuxtjs/router": "^1.0.1",
     "ajv": "^6.5.0",
