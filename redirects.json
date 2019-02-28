@@ -127,5 +127,6 @@
             "spotify" : "https://open.spotify.com/show/13gxkPj4wefYU9goAjHp2L?si=2fgPwHMdSn6pLEjEitJ6Xg",
             "stitcher" : "https://www.stitcher.com/podcast/toys-were-us&refid=podlink"
         }
-    }
+    },
+    { "from": "/hideandseek", "to": "/325364679",}
 ]
