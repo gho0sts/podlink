@@ -128,5 +128,10 @@
             "stitcher" : "https://www.stitcher.com/podcast/toys-were-us&refid=podlink"
         }
     },
-    { "from": "/hideandseek", "to": "/325364679"}
+    { "from": "/hideandseek", "to": "/325364679"},
+    { "from": "/relationshippower", "to": "/921738815",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/5r75KwJMsiOzjVeBmH26n4?si=yUCi6_5iTFquZYQDrkHi9g"
+        }
+    },
 ]
