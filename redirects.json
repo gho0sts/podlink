@@ -129,9 +129,9 @@
         }
     },
     { "from": "/hideandseek", "to": "/325364679"},
-    { "from": "/relationshippower", "to": "/921738815",
+    { "from": "/r", "to": "/921738815",
         "links" : {
             "spotify" : "https://open.spotify.com/show/5r75KwJMsiOzjVeBmH26n4?si=yUCi6_5iTFquZYQDrkHi9g"
         }
-    },
+    }
 ]
