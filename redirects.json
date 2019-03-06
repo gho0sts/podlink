@@ -133,5 +133,10 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/5r75KwJMsiOzjVeBmH26n4?si=yUCi6_5iTFquZYQDrkHi9g"
         }
+    },
+    { "from": "/thedidcast", "to": "/1455008579",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/28x1OPtlenS43vjDqGmOVf"
+        }
     }
 ]
