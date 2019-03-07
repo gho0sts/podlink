@@ -138,5 +138,11 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/28x1OPtlenS43vjDqGmOVf"
         }
+    },
+    { "from": "/founders", "to": "/1141877104",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/7txiovdzPARhjm18NwMUYj",
+            "stitcher" : "https://www.stitcher.com/podcast/a-podcast-about-podcasts/historically-great&refid=podlink"
+        }
     }
 ]
