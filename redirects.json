@@ -133,5 +133,11 @@
         "links" : {
             "spotify" : "https://open.spotify.com/show/5r75KwJMsiOzjVeBmH26n4?si=yUCi6_5iTFquZYQDrkHi9g"
         }
+    },
+    { "from": "/unco.fm", "to": "/1344323191",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/2535gMZInVtcyQ9YGKQ1tE",
+            "stitcher" : "https://www.stitcher.com/podcast/unco"
+        }
     }
 ]
