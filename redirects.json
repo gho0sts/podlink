@@ -134,10 +134,21 @@
             "spotify" : "https://open.spotify.com/show/5r75KwJMsiOzjVeBmH26n4?si=yUCi6_5iTFquZYQDrkHi9g"
         }
     },
+    { "from": "/thedidcast", "to": "/1455008579",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/28x1OPtlenS43vjDqGmOVf"
+        }
+    },
+    { "from": "/founders", "to": "/1141877104",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/7txiovdzPARhjm18NwMUYj",
+            "stitcher" : "https://www.stitcher.com/podcast/a-podcast-about-podcasts/historically-great&refid=podlink"
+        }
+    },
     { "from": "/unco.fm", "to": "/1344323191",
         "links" : {
             "spotify" : "https://open.spotify.com/show/2535gMZInVtcyQ9YGKQ1tE",
-            "stitcher" : "https://www.stitcher.com/podcast/unco"
+            "stitcher" : "https://www.stitcher.com/podcast/unco&refid=podlink"
         }
     }
 ]
