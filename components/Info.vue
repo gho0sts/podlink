@@ -1,8 +1,9 @@
 <template>
   <div class="show-info">
     <h1 class="show-title">{{show.title}}</h1>
-    <a class="show-author" v-if="show.link" :href="show.link">{{show.author}}</a>
-    <span class="show-author" v-if="!show.link" >{{show.author}}</span>
+    <a v-if="show.link" class="show-author" :href="show.link">{{show.author}}</a>
+    <span v-if="!show.link" class="show-author">{{show.author}}</span>
+    <a v-if="show.paymentLink" class="show-support" :href="show.paymentLink">Support this show</a>
     <ReadMore class="show-description" v-if="show.description.long" v-bind:text="show.description.long" />
   </div>
 </template>
@@ -45,21 +46,34 @@ a.show-author:hover {
 }
 
 .show-support {
-  display: inline-block;
-  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  line-height: 1.125;
+  font-weight: 900;
   text-decoration: none;
-  background: #1fb43d;
-  color: #ffffff;
-  padding: .25rem .5rem;
-  margin-top: .5rem;
-  border-radius: var(--borderradius);
+  color: var(--brandPrimary);
+  white-space: nowrap;
 
   &:hover {
-    background: #18882f;
+    text-decoration: underline;
   }
 
   @media screen and (min-width: 44rem) {
+    display: inline;
     font-size: .75rem;
+    margin-left: 1rem;
+    position: relative;
+
+    &:before {
+      content: "·";
+      color: var(--brandDark);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1rem;
+      width: 1rem;
+      text-align: center;
+    }
   }
 }
 
