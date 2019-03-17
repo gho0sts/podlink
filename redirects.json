@@ -150,5 +150,11 @@
             "spotify" : "https://open.spotify.com/show/2535gMZInVtcyQ9YGKQ1tE",
             "stitcher" : "https://www.stitcher.com/podcast/unco&refid=podlink"
         }
+    },
+    { "from": "/wehavecancer", "to": "/970806995",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/798gZB3qGwUnpwopVV2Bxh?si=PIzyypykRauLKckji9LXsQ",
+            "stitcher" : "https://www.stitcher.com/s?fid=61770&refid=podlink"
+        }
     }
 ]
