@@ -21,7 +21,7 @@ export default {
   computed: {
     facebookLink: function () { return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(this.sharableLink)},
     twitterLink: function () { return 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(this.sharableLink) + '&via=_PodLink&text=Subscribe%20to%20'+encodeURIComponent(this.title)+'%20in%20your%20preferred%20podcast%20app'},
-    embedCode: function () { return '<iframe width="100%" height="113" src="http://pod.link/' + this.iTunesID + '/embed" frameborder="0"></iframe>' }
+    embedCode: function () { return '<iframe width="100%" height="113" src="https://pod.link/' + this.iTunesID + '/embed" frameborder="0"></iframe>' }
   }
 }
 </script>
