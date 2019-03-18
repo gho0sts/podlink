@@ -7,10 +7,12 @@
         <p>Hey there,<br/><br/>
         Thanks for joining PodLink Premium. PodLink is a one-person side project and your custom URL will be verified and available soon.
         <br/><br/>
-        Your new link: <a :href="`${this.alias}`">{{alias}}</a>
+        </p>
+        <p v-if="`this.$route.query.alias`">Your new link: <a :href="`${this.alias}`">{{alias}}</a>
         <br/>will soon redirect to <a :href="`${this.standard}`">{{standard}}</a>
         <br/><br/>
-        If you have any question or feedback, you can email me at <a href="mailto:hello@pod.link" target="_blank">hello@pod.link</a>.
+        </p>
+        <p>If you have any question or feedback, you can email me at <a href="mailto:hello@pod.link" target="_blank">hello@pod.link</a>.
         If you havea a feature suggestion, you can post it on <a href="https://podlink.nolt.io" target="_blank">my public roadmap</a>.
         <br/><br/>
         Regards,<br/>
