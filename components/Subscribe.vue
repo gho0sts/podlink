@@ -22,7 +22,7 @@ export default {
   name: 'Subscribe',
   props: ['iTunesID','feedUrl', 'links'],
   computed: {
-    googleLink: function () { return 'https://www.google.com/podcasts?feed=' + Buffer.from(this.feedUrl).toString('base64')},
+    googleLink: function () { return 'https://podcasts.google.com/?feed=' + Buffer.from(this.feedUrl).toString('base64')},
     radiopublicLink: function () { return 'https://radiopublic.com/' + encodeURIComponent(this.feedUrl)},
     breakerLink: function () { 
       if (this.links && this.links.breaker ){
