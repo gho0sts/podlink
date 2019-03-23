@@ -29,17 +29,17 @@ export default {
   head () {
     if (this.itunes) {
       return {
-        title: `${this.show.title} — PodLink`,
+        title: `${this.show.title}`,
         meta: [
           { 
             hid: 'og:title', 
             property: 'og:title', 
-            content: `${this.show.title} — PodLink`
+            content: `${this.show.title}`
           },
           { 
             hid: 'twitter:title', 
             name: 'twitter:title', 
-            content: `${this.show.title} — PodLink`
+            content: `${this.show.title}`
           },
           { 
             hid: 'description', 
