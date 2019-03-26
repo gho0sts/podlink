@@ -174,11 +174,5 @@
             "spotify" : "https://open.spotify.com/show/7IcTaQHoTeSv2924twPThD?si=c2ldjzmSSEap-J1ctzRvyg",
             "stitcher" : "https://www.stitcher.com/podcast/duncan-autrey/fractal-friends&refid=podlink"
         }
-    },
-    { "from": "/switchedonpop", "to": "/934552872",
-        "links" : {
-            "spotify" : "https://open.spotify.com/show/1sgWaKtQxwfjUpZnnK8r7J",
-            "stitcher" : "https://www.stitcher.com/podcast/vox/switched-on-pop&refid=podlink"
-        }
     }
 ]

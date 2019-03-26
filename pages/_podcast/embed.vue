@@ -16,7 +16,7 @@
       <div class="show-details">
         <a :href="sharableLink" class="credit-tag" alt="PodLink Logo" target="_blank">
           <IconLogo /> 
-          <h1 class="show-title">Subscribe via PodLink</h1>
+          <h1 class="show-title">Subscribe to {{itunes.collectionName}}</h1>
         </a>
         <Subscribe class="show-subscribe" v-bind:iTunesID="itunes.collectionId" v-bind:feedUrl="itunes.feedUrl" v-bind:links="links" />
       </div>
