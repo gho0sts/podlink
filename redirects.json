@@ -160,19 +160,25 @@
     { "from": "/biggaybucketlist", "to": "/1419974061",
         "links" : {
             "spotify" : "https://open.spotify.com/show/7w8H22z4Qm8wfPPvD1s9NX",
-            "stitcher" : "https://www.stitcher.com/podcast/big-gay-bucket-list/the-big-gay-bucket-list"
+            "stitcher" : "https://www.stitcher.com/podcast/big-gay-bucket-list/the-big-gay-bucket-list&refid=podlink"
         }
     },
     { "from": "/lighterside", "to": "/1343834973",
         "links" : {
             "spotify" : "https://open.spotify.com/show/4ZDDaQdOXXohjauioQnVC1",
-            "stitcher" : "https://www.stitcher.com/podcast/the-lighter-side"
+            "stitcher" : "https://www.stitcher.com/podcast/the-lighter-side&refid=podlink"
         }
     },
     { "from": "/fractalfriends", "to": "/1073829236",
         "links" : {
             "spotify" : "https://open.spotify.com/show/7IcTaQHoTeSv2924twPThD?si=c2ldjzmSSEap-J1ctzRvyg",
-            "stitcher" : "https://www.stitcher.com/podcast/duncan-autrey/fractal-friends?refid=stpr"
+            "stitcher" : "https://www.stitcher.com/podcast/duncan-autrey/fractal-friends&refid=podlink"
+        }
+    },
+    { "from": "/switchedonpop", "to": "/934552872",
+        "links" : {
+            "spotify" : "https://open.spotify.com/show/1sgWaKtQxwfjUpZnnK8r7J",
+            "stitcher" : "https://www.stitcher.com/podcast/vox/switched-on-pop&refid=podlink"
         }
     }
 ]
