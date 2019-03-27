@@ -175,9 +175,9 @@
             "stitcher" : "https://www.stitcher.com/podcast/duncan-autrey/fractal-friends&refid=podlink"
         }
     },
-    { "from": "/https://pod.link/floor9", "to": "/1286914458",
+    { "from": "/floor9", "to": "/1286914458",
         "links" : {
-            "spotify" : "https://spotify.com/floor9"
+            "spotify" : "https://open.spotify.com/show/0NpUH48ut5K9CRLxoQflVF"
         }
     }
 ]
