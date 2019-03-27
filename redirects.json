@@ -177,7 +177,7 @@
     },
     { "from": "/https://pod.link/floor9", "to": "/1286914458",
         "links" : {
-            "spotify" : "https://spotify.com/floor9",
+            "spotify" : "https://spotify.com/floor9"
         }
     }
 ]
